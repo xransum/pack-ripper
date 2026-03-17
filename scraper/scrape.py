@@ -793,7 +793,7 @@ SCP_EMPTY_RETRY_JITTER = 1.0  # random(0, this) added on top
 # Parallel qualifier words that indicate a non-base parallel variant.
 _PARALLEL_KEYWORDS = re.compile(
     r"\b(holo|prizm|gold|silver|red|blue|green|purple|orange|pink|black|white|"
-    r"scope|shock|pandora|vinyl|optic|neon|wave|mojo|flash|hyper|ice|crystal|"
+    r"scope|shock|pandora|vinyl|neon|wave|mojo|flash|hyper|ice|crystal|"
     r"disco|mosaic|tiger|camo|choice|fotl|1st)\b",
     re.I,
 )
@@ -802,9 +802,24 @@ _PARALLEL_KEYWORDS = re.compile(
 _BRACKET_QUALIFIER = re.compile(r"\[[^\]]+\]")
 
 
+def _scp_normalize_name(name: str) -> str:
+    """
+    Normalize a player name for use in a SportsCardsPro search query.
+
+    - Strips apostrophes (Ja'Marr -> JaMarr)
+    - Strips dots that follow a letter (A.J. -> AJ, St. -> St, Jr. -> Jr)
+    - Strips lone generational/suffix tokens (II, III, IV, Jr, Sr)
+    """
+    name = name.replace("'", "")
+    name = re.sub(r"(?<=[A-Za-z])\.", "", name)
+    name = re.sub(r"\b(II|III|IV|Jr|Sr)\b", "", name)
+    return " ".join(name.split())
+
+
 def _scp_query(player_name: str, set_year: int, set_brand: str) -> str:
     """Build a search query string for SportsCardsPro."""
-    return f"{set_year} {set_brand} {player_name}"
+    normalized = _scp_normalize_name(player_name)
+    return f"{set_year} {set_brand} {normalized}"
 
 
 def _parse_price(text: str) -> float | None:
@@ -817,25 +832,74 @@ def _parse_price(text: str) -> float | None:
         return None
 
 
+# Wrong-sport keyword pattern -- rows matching these are heavily penalised.
+_WRONG_SPORT = re.compile(
+    r"\b(basketball|baseball|hockey|soccer|nba|mlb|nhl|mls)\b", re.I
+)
+
+
+def _name_token_overlap(player_name: str, title: str) -> float:
+    """
+    Fraction of meaningful player name tokens that appear in the card title.
+
+    Both strings are normalized (lowercased, non-alphanumeric stripped to
+    spaces). Tokens shorter than 2 characters are ignored so lone initials
+    and Roman numerals don't skew the score. Pure Roman numeral tokens
+    (ii, iii, iv) are also excluded from the player token set since SCP
+    titles rarely include them.
+
+    For duo names (contains '/'), overlap is computed for each sub-name
+    independently and the maximum is returned.
+    """
+    _ROMAN = {"ii", "iii", "iv"}
+
+    def _tokens(s: str, strip_roman: bool = False) -> set[str]:
+        s = s.lower()
+        s = re.sub(r"[^a-z0-9 ]", " ", s)
+        result = {t for t in s.split() if len(t) >= 2}
+        if strip_roman:
+            result -= _ROMAN
+        return result
+
+    title_tokens = _tokens(title)
+
+    def _overlap_single(name: str) -> float:
+        p_tokens = _tokens(name, strip_roman=True)
+        if not p_tokens:
+            return 0.0
+        return len(p_tokens & title_tokens) / len(p_tokens)
+
+    if "/" in player_name:
+        parts = [p.strip() for p in player_name.split("/") if p.strip()]
+        return max((_overlap_single(p) for p in parts), default=0.0)
+    return _overlap_single(player_name)
+
+
 def _best_scp_match(
     rows: list[dict],
     player_name: str,
     card_number: int | None,
     set_name_fragment: str,
+    set_year: int | None = None,
 ) -> dict | None:
     """
     Pick the best SportsCardsPro result row for a given card.
 
     Scoring:
+      +5   full set_name_fragment in set_name (e.g. "Donruss Optic")
+      +2   parent brand (first word of fragment) in set_name but not full match
+      +3   set_year appears in title
       +10  card number appears in title ("#N" or trailing "N")
+      +0-6 player name token overlap with title (scaled)
       +3   player name slug in product URL
       -5   parallel qualifier keyword in title
       -3   bracket qualifier in title
+      -10  wrong sport keyword in title or set_name
 
-    Set name must contain set_name_fragment. Rows without a real image
-    are excluded. Highest-scoring row wins.
+    Rows without a real image are excluded. Highest-scoring row wins;
+    no minimum threshold so there is always a best-effort result.
     """
-    name_slug = _name_to_slug(player_name)
+    parent_brand = set_name_fragment.split()[0] if set_name_fragment else ""
     candidates = []
 
     for row in rows:
@@ -845,19 +909,41 @@ def _best_scp_match(
 
         if not image_url or "no-image-available" in image_url:
             continue
-        if set_name_fragment.lower() not in set_name.lower():
-            continue
 
         score = 0
+
+        # Wrong-sport hard penalty
+        if _WRONG_SPORT.search(title) or _WRONG_SPORT.search(set_name):
+            score -= 10
+
+        # Set name signal
+        if set_name_fragment and set_name_fragment.lower() in set_name.lower():
+            score += 5
+        elif parent_brand and parent_brand.lower() in set_name.lower():
+            score += 2
+
+        # Year match bonus
+        if set_year and str(set_year) in title:
+            score += 3
+
+        # Card number
         if card_number is not None:
             if re.search(rf"#\s*{card_number}\b", title) or re.search(
                 rf"\b{card_number}\s*$", title
             ):
                 score += 10
+
+        # Parallel / bracket penalties
         if _PARALLEL_KEYWORDS.search(title):
             score -= 5
         if _BRACKET_QUALIFIER.search(title):
             score -= 3
+
+        # Name token overlap (0-6 pts)
+        score += round(_name_token_overlap(player_name, title) * 6)
+
+        # Product URL slug bonus
+        name_slug = _name_to_slug(player_name)
         product_url = row.get("product_url", "")
         if name_slug and name_slug in product_url.replace("/", "-"):
             score += 3
@@ -939,66 +1025,90 @@ async def _async_fetch_scp_player(
 
     Returns (player_name, rows).
 
-    Two independent retry layers:
-      - Throttle retries (HTTP 429/503 or timeout): up to SCP_MAX_RETRIES,
-        exponential backoff SCP_BACKOFF_BASE * 2^attempt + jitter.
-      - Empty-result retries (200 OK but zero rows): up to SCP_EMPTY_RETRIES,
-        backoff SCP_EMPTY_RETRY_BASE * 2^attempt + jitter. Each empty retry
-        re-enters the throttle-retry loop from scratch.
+    For duo names (contains '/'), each sub-name is queried independently
+    and the result rows are unioned before returning.
 
-    A per-request inter-arrival jitter delay is applied once on entry
-    (before the first throttle attempt) to spread concurrent workers.
+    Three retry layers per query:
+      1. Throttle retries (HTTP 429/503 or timeout): exponential backoff.
+      2. Empty-result retries (200 OK but zero rows): separate backoff.
+      3. Fallback query: if still empty after all retries, retry with a
+         last-name-only query (widest net).
     """
-    query = _scp_query(player_name, set_year, set_brand)
-    url = SCP_SEARCH_URL.format(query=urllib.parse.quote(query))
+    # Duo handling: split on '/', deduplicate, fetch each sub-name, union rows.
+    if "/" in player_name:
+        sub_names = list(
+            dict.fromkeys(p.strip() for p in player_name.split("/") if p.strip())
+        )
+        combined: list[dict] = []
+        for sub in sub_names:
+            _, sub_rows = await _async_fetch_scp_player(
+                session, sub, set_year, set_brand, semaphore
+            )
+            combined.extend(sub_rows)
+        return player_name, combined
 
-    async with semaphore:
-        # Inter-arrival jitter so concurrent workers don't all fire together
-        await asyncio.sleep(random.uniform(SCP_JITTER_MIN, SCP_JITTER_MAX))
+    async def _fetch_query(query: str) -> list[dict]:
+        """Fetch one query string through the throttle + empty-retry loops."""
+        url = SCP_SEARCH_URL.format(query=urllib.parse.quote(query))
 
-        for empty_attempt in range(SCP_EMPTY_RETRIES + 1):
-            # Throttle/error retry loop
-            rows: list[dict] = []
-            for attempt in range(SCP_MAX_RETRIES + 1):
-                try:
-                    async with session.get(
-                        url, timeout=aiohttp.ClientTimeout(total=30)
-                    ) as resp:
-                        if resp.status in (429, 503):
-                            if attempt < SCP_MAX_RETRIES:
-                                wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
-                                    0, SCP_BACKOFF_JITTER
-                                )
-                                await asyncio.sleep(wait)
-                                continue
-                            return player_name, []
-                        if resp.status != 200:
-                            return player_name, []
-                        html = await resp.text()
-                        rows = _parse_scp_html(html)
-                        break  # successful fetch; rows may still be empty
-                except asyncio.TimeoutError:
-                    if attempt < SCP_MAX_RETRIES:
-                        wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
-                            0, SCP_BACKOFF_JITTER
-                        )
-                        await asyncio.sleep(wait)
-                    else:
-                        return player_name, []
-                except aiohttp.ClientError:
-                    return player_name, []
+        async with semaphore:
+            await asyncio.sleep(random.uniform(SCP_JITTER_MIN, SCP_JITTER_MAX))
 
-            if rows:
-                return player_name, rows
+            for empty_attempt in range(SCP_EMPTY_RETRIES + 1):
+                rows: list[dict] = []
+                for attempt in range(SCP_MAX_RETRIES + 1):
+                    try:
+                        async with session.get(
+                            url, timeout=aiohttp.ClientTimeout(total=30)
+                        ) as resp:
+                            if resp.status in (429, 503):
+                                if attempt < SCP_MAX_RETRIES:
+                                    wait = SCP_BACKOFF_BASE * (
+                                        2**attempt
+                                    ) + random.uniform(0, SCP_BACKOFF_JITTER)
+                                    await asyncio.sleep(wait)
+                                    continue
+                                return []
+                            if resp.status != 200:
+                                return []
+                            html = await resp.text()
+                            rows = _parse_scp_html(html)
+                            break
+                    except asyncio.TimeoutError:
+                        if attempt < SCP_MAX_RETRIES:
+                            wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
+                                0, SCP_BACKOFF_JITTER
+                            )
+                            await asyncio.sleep(wait)
+                        else:
+                            return []
+                    except aiohttp.ClientError:
+                        return []
 
-            # Got a clean 200 but zero rows -- wait and retry if budget remains
-            if empty_attempt < SCP_EMPTY_RETRIES:
-                wait = SCP_EMPTY_RETRY_BASE * (2**empty_attempt) + random.uniform(
-                    0, SCP_EMPTY_RETRY_JITTER
-                )
-                await asyncio.sleep(wait)
+                if rows:
+                    return rows
 
-        return player_name, []
+                if empty_attempt < SCP_EMPTY_RETRIES:
+                    wait = SCP_EMPTY_RETRY_BASE * (2**empty_attempt) + random.uniform(
+                        0, SCP_EMPTY_RETRY_JITTER
+                    )
+                    await asyncio.sleep(wait)
+
+            return []
+
+    # Primary query: full normalized name
+    rows = await _fetch_query(_scp_query(player_name, set_year, set_brand))
+    if rows:
+        return player_name, rows
+
+    # Fallback query: year + last word of normalized name (widest net)
+    normalized = _scp_normalize_name(player_name)
+    words = normalized.split()
+    if words:
+        fallback_query = f"{set_year} {words[-1]}"
+        rows = await _fetch_query(fallback_query)
+
+    return player_name, rows
 
 
 async def _async_scrape_all_players(
@@ -1108,6 +1218,7 @@ def scrape_sportscardspro(data: dict, set_year: int, set_brand: str) -> None:
                 player_name=player_name,
                 card_number=card.get("number"),
                 set_name_fragment=set_name_fragment,
+                set_year=set_year,
             )
             if best is None:
                 continue
