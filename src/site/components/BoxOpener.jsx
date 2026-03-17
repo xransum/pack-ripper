@@ -268,6 +268,8 @@ export default function BoxOpener({ setData, boxTypeKey }) {
               key={`${currentKey}-${packs.length}-${idx}`}
               pack={pack}
               packNumber={idx + 1}
+              brand={setData.brand ?? null}
+              setName={setData.name ?? ''}
             />
           ))}
         </div>
@@ -282,6 +284,8 @@ export default function BoxOpener({ setData, boxTypeKey }) {
               key={`${currentKey}-${packs.length}-${currentPackIdx}`}
               pack={packs[currentPackIdx]}
               packNumber={currentPackIdx + 1}
+              brand={setData.brand ?? null}
+              setName={setData.name ?? ''}
               onAdvance={handleAdvance}
               autoAdvance={autoAdvance}
             />
@@ -301,6 +305,8 @@ export default function BoxOpener({ setData, boxTypeKey }) {
                       key={`${currentKey}-history-${historyEnd - 1 - i}`}
                       pack={pack}
                       packNumber={historyEnd - i}
+                      brand={setData.brand ?? null}
+                      setName={setData.name ?? ''}
                     />
                   ));
               })()}

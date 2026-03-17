@@ -37,3 +37,43 @@
 .card-stagger-3 { transition-delay: 360ms; }
 .card-stagger-4 { transition-delay: 480ms; }
 .card-stagger-5 { transition-delay: 600ms; }
+
+/* Pack tear animation */
+.pack-flap,
+.pack-body {
+  will-change: transform, opacity;
+}
+
+@keyframes tear-flap {
+  0%   { transform: translateY(0) rotate(0deg);      opacity: 1; }
+  100% { transform: translateY(-200%) rotate(-10deg); opacity: 0; }
+}
+
+@keyframes tear-body {
+  0%   { transform: translateY(0);   opacity: 1; }
+  100% { transform: translateY(8px); opacity: 0; }
+}
+
+.pack-tearing .pack-flap {
+  animation: tear-flap 0.32s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.pack-tearing .pack-body {
+  animation: tear-body 0.32s cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation-delay: 0.04s;
+}
+
+/* Idle hover/touch pulse -- only when not animating */
+.pack-idle {
+  transition: transform 0.15s ease;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.pack-idle:hover {
+  transform: scale(1.03);
+}
+
+.pack-idle:active {
+  transform: scale(0.98);
+}

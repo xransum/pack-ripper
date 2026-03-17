@@ -1,76 +1,100 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CardSlot from './CardSlot.jsx';
+import PackArt from './PackArt.jsx';
 
 /**
- * PackReveal -- renders all cards in one pack, staggered flip animations.
+ * PackReveal -- renders one pack.
+ *
+ * In pack-by-pack mode (onAdvance provided), the pack starts as a PackArt
+ * graphic. Clicking or auto-advancing plays a tear animation, then flips the
+ * cards in with the existing stagger animation.
+ *
+ * In open-all mode (no onAdvance), the pack skips straight to cards.
  *
  * Props:
  *   pack        - { packIndex, cards: Card[] }
  *   packNumber  - 1-indexed pack number for display
- *   onAdvance   - optional callback; when provided, clicking the pack calls it
- *   autoAdvance - boolean; when true + onAdvance provided, auto-calls onAdvance
- *                 after the last card finishes flipping
+ *   brand       - set brand object { primary, shimmer } for pack art
+ *   setName     - full set name for pack art label
+ *   onAdvance   - optional callback fired after tear completes
+ *   autoAdvance - boolean; auto-tears after last card's flip duration
  */
-export default function PackReveal({ pack, packNumber, onAdvance, autoAdvance = false }) {
-  const [revealed, setRevealed] = useState(false);
-  const [advanced, setAdvanced] = useState(false);
+export default function PackReveal({
+  pack,
+  packNumber,
+  brand,
+  setName,
+  onAdvance,
+  autoAdvance = false,
+}) {
+  // phase: 'idle' | 'tearing' | 'revealed'
+  // When onAdvance is not provided (open-all mode), skip straight to revealed.
+  const [phase, setPhase] = useState(() => (onAdvance ? 'idle' : 'revealed'));
+  const [cardsRevealed, setCardsRevealed] = useState(() => !onAdvance);
+  const advancedRef = useRef(false);
 
+  // When the phase transitions to revealed, trigger the card flip stagger
   useEffect(() => {
-    const t = setTimeout(() => setRevealed(true), 100);
+    if (phase !== 'revealed') return;
+    const t = setTimeout(() => setCardsRevealed(true), 60);
     return () => clearTimeout(t);
-  }, []);
+  }, [phase]);
 
-  // Auto-advance after last card flips (stagger 5 = 600ms delay + 600ms flip = 1200ms, +200ms buffer)
+  // Auto-advance: fires 1400ms after cards start flipping (last stagger ~600ms + 600ms flip + 200ms buffer)
   useEffect(() => {
-    if (!onAdvance || !autoAdvance || !revealed || advanced) return;
-    const t = setTimeout(() => {
-      setAdvanced(true);
-      onAdvance();
-    }, 1400);
+    if (!onAdvance || !autoAdvance || phase !== 'idle' || advancedRef.current) return;
+    // 1400ms (card reveal) + 350ms (tear) = 1750ms from mount
+    const t = setTimeout(() => doAdvance(), 1750);
     return () => clearTimeout(t);
-  }, [revealed, onAdvance, autoAdvance, advanced]);
+  }, [phase, onAdvance, autoAdvance]);
 
-  function handleClick() {
-    if (!onAdvance || advanced) return;
-    setAdvanced(true);
-    onAdvance();
+  function doAdvance() {
+    if (advancedRef.current || phase !== 'idle') return;
+    advancedRef.current = true;
+    setPhase('tearing');
+    // After tear animation completes, reveal cards and notify parent
+    setTimeout(() => {
+      setPhase('revealed');
+      if (onAdvance) onAdvance();
+    }, 360);
   }
 
   const cards = pack?.cards ?? [];
   const hasHit = cards.some((c) => c.is_hit);
-  const clickable = !!onAdvance && !advanced;
 
   return (
-    <div
-      className={`flex flex-col gap-3 ${clickable ? 'cursor-pointer select-none' : ''}`}
-      onClick={clickable ? handleClick : undefined}
-    >
+    <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
           Pack {packNumber}
         </span>
-        {hasHit && (
+        {hasHit && phase === 'revealed' && (
           <span className="text-[10px] font-bold bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full">
             HIT
           </span>
         )}
-        {clickable && (
-          <span className="text-[10px] text-gray-500 ml-auto">
-            click to continue
-          </span>
-        )}
       </div>
 
-      <div className="flex flex-wrap gap-3">
-        {cards.map((card, idx) => (
-          <CardSlot
-            key={idx}
-            card={card}
-            staggerIndex={idx}
-            revealed={revealed}
-          />
-        ))}
-      </div>
+      {phase !== 'revealed' ? (
+        <PackArt
+          brand={brand}
+          setName={setName}
+          packNumber={packNumber}
+          phase={phase}
+          onClick={doAdvance}
+        />
+      ) : (
+        <div className="flex flex-wrap gap-3">
+          {cards.map((card, idx) => (
+            <CardSlot
+              key={idx}
+              card={card}
+              staggerIndex={idx}
+              revealed={cardsRevealed}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

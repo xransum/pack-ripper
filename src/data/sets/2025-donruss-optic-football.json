@@ -5,6 +5,16 @@
   "sport": "football",
   "boxes_per_case": 12,
   "source_url": "https://www.beckett.com/news/2025-donruss-optic-football-cards/",
+  "brand": {
+    "primary": "#0a0a1e",
+    "shimmer": [
+      "#1e3a8a",
+      "#4f46e5",
+      "#7c3aed",
+      "#db2777",
+      "#ea580c"
+    ]
+  },
   "box_types": {
     "hobby": {
       "label": "Hobby Box:",

@@ -115,6 +115,18 @@ STATIC_BOX_OVERRIDES: dict[str, dict] = {
     "hobby_blaster": {"boxes_per_case": 20},
 }
 
+# Static top-level fields to inject into the set object after scraping.
+# Used for UI/branding data that has no source in the Beckett page.
+# Keyed by set id.
+STATIC_SET_FIELDS: dict[str, dict] = {
+    "2025-donruss-optic-football": {
+        "brand": {
+            "primary": "#0a0a1e",
+            "shimmer": ["#1e3a8a", "#4f46e5", "#7c3aed", "#db2777", "#ea580c"],
+        },
+    },
+}
+
 
 def classify_box_type(heading_text: str) -> str | None:
     text = heading_text.lower().strip()
@@ -552,7 +564,7 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
     print("  Extracting parallels...")
     parallels = _extract_parallels(soup)
 
-    return {
+    set_obj = {
         "id": meta["id"],
         "name": meta["name"],
         "year": meta["year"],
@@ -569,6 +581,20 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
             "parallels": parallels,
         },
     }
+
+    # Inject static top-level fields (branding etc.) that have no Beckett source
+    static_fields = STATIC_SET_FIELDS.get(meta["id"], {})
+    if static_fields:
+        # Insert after source_url to keep a logical ordering
+        ordered = {}
+        for k, v in set_obj.items():
+            ordered[k] = v
+            if k == "source_url":
+                for sf_k, sf_v in static_fields.items():
+                    ordered[sf_k] = sf_v
+        set_obj = ordered
+
+    return set_obj
 
 
 def _extract_base_set(soup: BeautifulSoup, img_urls: list) -> dict:
