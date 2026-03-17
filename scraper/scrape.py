@@ -107,6 +107,14 @@ BOX_TYPE_PATTERNS = [
 PACK_BASED = {"hobby_blaster", "hobby", "fotl", "h2"}
 FLAT_BASED = {"blaster", "mega", "hobby_mega", "choice"}
 
+# Static fields to inject into box configs after scraping.
+# Used for values Beckett does not publish in the at-a-glance table.
+STATIC_BOX_OVERRIDES: dict[str, dict] = {
+    # Hobby blaster has no standard case size listed by Beckett.
+    # 20 matches the friend's claim and is consistent with blaster-tier products.
+    "hobby_blaster": {"boxes_per_case": 20},
+}
+
 
 def classify_box_type(heading_text: str) -> str | None:
     text = heading_text.lower().strip()
@@ -518,6 +526,11 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
     # Add pack slots to each box type
     for key, bc in box_configs.items():
         bc["pack_slots"] = build_pack_slots(key, bc.get("guarantees", {}))
+
+    # Apply static overrides for fields Beckett does not publish
+    for key, overrides in STATIC_BOX_OVERRIDES.items():
+        if key in box_configs:
+            box_configs[key].update(overrides)
 
     print("  Extracting images...")
     img_urls = extract_images(soup)
