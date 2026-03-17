@@ -103,7 +103,6 @@
     "hobby_blaster": {
       "label": "Hobby Blaster Box:",
       "tier": "pack",
-      "boxes_per_case": 20,
       "guarantees": {
         "Blue Scope Rated Rookies": 3,
         "Base Rated Rookies": 6,
@@ -136,7 +135,8 @@
           "every_n_packs": 6,
           "hit_eligible": true
         }
-      ]
+      ],
+      "boxes_per_case": 20
     },
     "blaster": {
       "label": "Blaster Box:",
