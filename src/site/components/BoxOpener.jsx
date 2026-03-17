@@ -275,18 +275,44 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         </div>
       )}
 
-      {/* Pack by Pack -- one PackArt on screen at a time; modal handles card reveal */}
-      {result && packByPack && revealedUpTo > 0 && modalPackIdx === null && (
-        <div className="flex justify-center py-4">
-          <PackReveal
-            key={`${currentKey}-${packs.length}-${currentPackIdx}`}
-            pack={packs[currentPackIdx]}
-            packNumber={currentPackIdx + 1}
-            brand={setData.brand ?? null}
-            setName={setData.name ?? ''}
-            onAdvance={() => handleTearComplete(currentPackIdx)}
-            autoAdvance={autoAdvance}
-          />
+      {/* Pack by Pack -- active pack art + history of revealed packs below */}
+      {result && packByPack && revealedUpTo > 0 && (
+        <div className="flex flex-col gap-8">
+          {/* Active pack -- hidden while modal is open so there's no flash */}
+          {modalPackIdx === null && (
+            <div className="flex justify-center py-4">
+              <PackReveal
+                key={`${currentKey}-${packs.length}-${currentPackIdx}`}
+                pack={packs[currentPackIdx]}
+                packNumber={currentPackIdx + 1}
+                brand={setData.brand ?? null}
+                setName={setData.name ?? ''}
+                onAdvance={() => handleTearComplete(currentPackIdx)}
+                autoAdvance={autoAdvance}
+              />
+            </div>
+          )}
+
+          {/* Previously revealed packs -- shown in reverse order, newest first */}
+          {currentPackIdx > 0 && (
+            <div className="flex flex-col gap-8 border-t border-gray-700 pt-6">
+              <span className="text-xs text-gray-500 uppercase tracking-wider">Previous Packs</span>
+              {packs
+                .slice(0, currentPackIdx)
+                .slice()
+                .reverse()
+                .map((pack, i, arr) => (
+                  <PackReveal
+                    key={`${currentKey}-history-${currentPackIdx - 1 - i}`}
+                    pack={pack}
+                    packNumber={currentPackIdx - i}
+                    brand={setData.brand ?? null}
+                    setName={setData.name ?? ''}
+                  />
+                ))
+              }
+            </div>
+          )}
         </div>
       )}
 
