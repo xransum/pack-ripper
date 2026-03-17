@@ -98,6 +98,7 @@ export default function PackReveal({
             card={card}
             staggerIndex={idx}
             revealed={cardsRevealed}
+            brand={brand}
           />
         ))}
       </div>

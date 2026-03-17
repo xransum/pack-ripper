@@ -43,8 +43,9 @@ function parallelBadgeClass(parallel) {
  *   card        - card object from the simulator engine
  *   staggerIndex - integer 0-5 for CSS transition delay class
  *   revealed    - boolean controlling whether the flip has played
+ *   brand       - set brand object { primary, shimmer[] } or null
  */
-export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
+export default function CardSlot({ card, staggerIndex = 0, revealed = false, brand = null }) {
   const [imgError, setImgError] = useState(false);
   const base = import.meta.env.BASE_URL;
   const fallback = `${base}card-back.svg`;
@@ -61,6 +62,14 @@ export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
     ? 'ring-1 ring-indigo-400 shadow-md shadow-indigo-400/30'
     : '';
 
+  // Brand-derived placeholder styles
+  const placeholderBg = brand?.primary ?? '#111827';
+  const placeholderAccent = brand?.shimmer?.[0] ?? '#4f46e5';
+
+  const hasImage = card?.image_url && !imgError;
+
+  const price = card?.price_ungraded;
+
   return (
     <div className={`card-scene w-[140px] h-[196px] ${staggerClass}`}>
       <div className={`card-flipper w-full h-full ${revealed ? 'flipped' : ''} ${staggerClass}`}>
@@ -74,10 +83,11 @@ export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
         </div>
 
         {/* Front face */}
-        <div className={`card-face card-face-front w-full h-full rounded-xl overflow-hidden bg-gray-900 flex flex-col ${glowClass}`}>
+        <div className={`card-face card-face-front w-full h-full rounded-xl overflow-hidden flex flex-col ${glowClass}`}
+          style={{ background: placeholderBg }}>
           {/* Card image */}
-          <div className="flex-1 relative bg-gray-800">
-            {card?.image_url && !imgError ? (
+          <div className="flex-1 relative overflow-hidden">
+            {hasImage ? (
               <img
                 src={card.image_url}
                 alt={card.name}
@@ -85,8 +95,20 @@ export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-gray-500 text-xs text-center px-2">
-                {card?.name ?? 'Unknown'}
+              // Styled placeholder using brand colors
+              <div
+                className="w-full h-full flex flex-col items-center justify-center gap-1 px-2"
+                style={{ background: placeholderBg }}
+              >
+                {/* Shimmer accent bar */}
+                <div
+                  className="w-10 h-0.5 rounded-full opacity-60 mb-1"
+                  style={{ background: placeholderAccent }}
+                />
+                <span className="text-[10px] font-semibold text-center leading-tight"
+                  style={{ color: placeholderAccent, opacity: 0.85 }}>
+                  {card?.name ?? 'Unknown'}
+                </span>
               </div>
             )}
 
@@ -103,10 +125,18 @@ export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
                 #{card.number}
               </div>
             )}
+
+            {/* Price badge -- shown only when revealed and price is available */}
+            {revealed && price != null && (
+              <div className="absolute bottom-1 right-1 bg-black/70 text-green-400 text-[9px] font-semibold px-1 py-0.5 rounded">
+                ${price.toFixed(2)}
+              </div>
+            )}
           </div>
 
           {/* Card info footer */}
-          <div className="px-1.5 py-1 bg-gray-900 min-h-[48px] flex flex-col justify-center gap-0.5">
+          <div className="px-1.5 py-1 min-h-[48px] flex flex-col justify-center gap-0.5"
+            style={{ background: placeholderBg }}>
             <div className="text-white text-[10px] font-semibold leading-tight truncate">
               {card?.name ?? '--'}
             </div>
@@ -120,7 +150,7 @@ export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
                 </span>
               )}
               {card?.slot && (
-                <span className="text-[8px] px-1 py-0.5 rounded bg-gray-700 text-gray-300">
+                <span className="text-[8px] px-1 py-0.5 rounded bg-white/10 text-gray-300">
                   {card.slot === 'insert' && card._category
                     ? INSERT_CATEGORY_LABELS[card._category] ?? card._category
                     : SLOT_LABELS[card.slot] ?? card.slot}

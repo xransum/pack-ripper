@@ -329,6 +329,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
           packNumber={modalPackIdx + 1}
           totalPacks={totalPacks}
           boxLabel={boxConfig?.label ?? 'Box'}
+          brand={setData.brand ?? null}
           onNext={handleModalNext}
           isLastPack={revealedUpTo >= totalPacks}
         />

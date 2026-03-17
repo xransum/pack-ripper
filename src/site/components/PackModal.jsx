@@ -10,6 +10,7 @@ import CardSlot from './CardSlot.jsx';
  *   packNumber  - 1-indexed pack number
  *   totalPacks  - total packs in the box
  *   boxLabel    - e.g. "Hobby Box"
+ *   brand       - set brand object { primary, shimmer[] } or null
  *   onNext      - callback fired when the user taps the advance button
  *   isLastPack  - true when this is the final pack in the box
  */
@@ -18,6 +19,7 @@ export default function PackModal({
   packNumber,
   totalPacks,
   boxLabel,
+  brand,
   onNext,
   isLastPack,
 }) {
@@ -80,6 +82,7 @@ export default function PackModal({
                 card={card}
                 staggerIndex={idx}
                 revealed={cardsRevealed}
+                brand={brand}
               />
             ))}
           </div>

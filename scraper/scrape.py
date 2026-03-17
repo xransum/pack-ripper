@@ -21,6 +21,7 @@ import os
 import re
 import sys
 import time
+import urllib.parse
 
 import requests
 from bs4 import BeautifulSoup
@@ -124,6 +125,10 @@ STATIC_SET_FIELDS: dict[str, dict] = {
             "primary": "#0a0a1e",
             "shimmer": ["#1e3a8a", "#4f46e5", "#7c3aed", "#db2777", "#ea580c"],
         },
+        # Short brand name used in SportsCardsPro queries.
+        # Stored here so it is preserved across re-scrapes without affecting
+        # the emitted JSON (it is popped before writing the set file).
+        "_scp_brand": "Donruss Optic",
     },
 }
 
@@ -587,7 +592,8 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
         },
     }
 
-    # Inject static top-level fields (branding etc.) that have no Beckett source
+    # Inject static top-level fields (branding etc.) that have no Beckett source.
+    # Keys starting with '_' are internal scraper hints and are not emitted.
     static_fields = STATIC_SET_FIELDS.get(meta["id"], {})
     if static_fields:
         # Insert after source_url to keep a logical ordering
@@ -596,7 +602,8 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
             ordered[k] = v
             if k == "source_url":
                 for sf_k, sf_v in static_fields.items():
-                    ordered[sf_k] = sf_v
+                    if not sf_k.startswith("_"):
+                        ordered[sf_k] = sf_v
         set_obj = ordered
 
     return set_obj
@@ -662,7 +669,9 @@ def _extract_base_set(soup: BeautifulSoup, img_urls: list) -> dict:
                 for c in cards:
                     c["is_rookie"] = True
                     _apply_image(c, img_urls)
-                rated_rookies = cards
+                # Rated rookies are numbered 201-300; drop any parsing artifacts
+                # (e.g. a "100 cards" section header caught by the card regex)
+                rated_rookies = [c for c in cards if 201 <= c["number"] <= 300]
                 break
 
     return {"veterans": veterans, "rated_rookies": rated_rookies}
@@ -755,6 +764,276 @@ def _collect_list_items(heading) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# SportsCardsPro scraping (images + prices)
+# ---------------------------------------------------------------------------
+
+SCP_SEARCH_URL = "https://www.sportscardspro.com/search-products?q={query}&type=prices"
+
+# Parallel qualifier words that indicate a non-base parallel variant.
+# Rows whose title contains any of these are skipped when looking for the
+# base-card image so we don't pick up a Holo/Gold/Red variant photo.
+_PARALLEL_KEYWORDS = re.compile(
+    r"\b(holo|prizm|gold|silver|red|blue|green|purple|orange|pink|black|white|"
+    r"scope|shock|pandora|vinyl|optic|neon|wave|mojo|flash|hyper|ice|crystal|"
+    r"disco|mosaic|tiger|camo|choice|fotl|1st)\b",
+    re.I,
+)
+
+# Bracket qualifier pattern (e.g. "[Gold]", "[RC]" etc.)
+_BRACKET_QUALIFIER = re.compile(r"\[[^\]]+\]")
+
+
+def _scp_query(player_name: str, set_year: int, set_brand: str) -> str:
+    """Build a search query string for SportsCardsPro."""
+    # e.g. "2025 Donruss Optic Travis Hunter"
+    return f"{set_year} {set_brand} {player_name}"
+
+
+def _parse_price(text: str) -> float | None:
+    """Parse a price string like '$1.76' or 'N/A' to a float or None."""
+    text = text.strip().lstrip("$").replace(",", "")
+    try:
+        val = float(text)
+        return val if val > 0 else None
+    except ValueError:
+        return None
+
+
+def _best_scp_match(
+    rows: list[dict],
+    player_name: str,
+    card_number: int | None,
+    set_name_fragment: str,
+) -> dict | None:
+    """
+    Pick the best SportsCardsPro result row for a given card.
+
+    Strategy (in order of preference):
+      1. Set name contains set_name_fragment (case-insensitive)
+      2. Card title contains the card number ("#N" or just "N" at end)
+      3. Title has no parallel qualifier keywords (prefer base card)
+      4. Title has no bracket qualifiers
+
+    Returns the best-matching row dict or None.
+    """
+    name_slug = _name_to_slug(player_name)
+    candidates = []
+
+    for row in rows:
+        title = row.get("title", "").strip()
+        set_name = row.get("set_name", "").strip()
+        image_url = row.get("image_url", "")
+
+        # Must have an actual card image (not the no-image placeholder)
+        if not image_url or "no-image-available" in image_url:
+            continue
+
+        # Set name must mention the brand we're looking for
+        if set_name_fragment.lower() not in set_name.lower():
+            continue
+
+        # Score: higher is better
+        score = 0
+
+        # Bonus if card number appears in title
+        if card_number is not None:
+            if re.search(rf"#\s*{card_number}\b", title) or re.search(
+                rf"\b{card_number}\s*$", title
+            ):
+                score += 10
+
+        # Penalty for parallel qualifier words
+        if _PARALLEL_KEYWORDS.search(title):
+            score -= 5
+
+        # Penalty for bracket qualifiers
+        if _BRACKET_QUALIFIER.search(title):
+            score -= 3
+
+        # Bonus if player name slug appears in the product URL slug
+        product_url = row.get("product_url", "")
+        if name_slug and name_slug in product_url.replace("/", "-"):
+            score += 3
+
+        candidates.append((score, row))
+
+    if not candidates:
+        return None
+
+    # Sort by score descending; take first (stable sort preserves order on ties)
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    return candidates[0][1]
+
+
+def _scrape_scp_player(
+    player_name: str,
+    set_year: int,
+    set_brand: str,
+    sleep_secs: float = 0.5,
+) -> list[dict]:
+    """
+    Query SportsCardsPro for a player and return all result rows as dicts.
+
+    Each dict has keys: title, set_name, product_url, image_url,
+    price_ungraded (float or None).
+    """
+    query = _scp_query(player_name, set_year, set_brand)
+    encoded = urllib.parse.quote(query)
+    url = SCP_SEARCH_URL.format(query=encoded)
+
+    try:
+        soup = fetch(url)
+    except Exception as exc:
+        print(f"    [warn] SCP fetch failed for '{player_name}': {exc}")
+        return []
+    finally:
+        time.sleep(sleep_secs)
+
+    rows = []
+    table = soup.find("table", {"id": "games_table"})
+    if not table:
+        return rows
+
+    tbody = table.find("tbody")
+    if not tbody:
+        return rows
+
+    for tr in tbody.find_all("tr"):  # type: ignore[union-attr]
+        # Image cell
+        img_tag = tr.find("td", class_="image")
+        img_url = None
+        product_url = None
+        if img_tag:
+            a = img_tag.find("a")
+            if a:
+                product_url = a.get("href", "")
+            img = img_tag.find("img")
+            if img:
+                src = str(img.get("src", "") or "")
+                # Upgrade 60px thumbnail to 120px
+                img_url = src.replace("/60.jpg", "/120.jpg") if src else None
+
+        # Title cell
+        title_td = tr.find("td", class_="title")
+        title = ""
+        if title_td:
+            a = title_td.find("a")
+            title = a.get_text(strip=True) if a else title_td.get_text(strip=True)
+
+        # Set/console cell
+        console_td = tr.find("td", class_="console")
+        set_name = ""
+        if console_td:
+            a = console_td.find("a")
+            set_name = a.get_text(strip=True) if a else console_td.get_text(strip=True)
+        # Strip trailing sport qualifier e.g. " (Football)"
+        set_name = re.sub(r"\s*\([^)]+\)\s*$", "", set_name).strip()
+
+        # Ungraded price (td.used_price .js-price)
+        price_td = tr.find("td", class_="used_price")
+        price = None
+        if price_td:
+            span = price_td.find("span", class_="js-price")
+            if span:
+                price = _parse_price(span.get_text())
+
+        if title:
+            rows.append(
+                {
+                    "title": title,
+                    "set_name": set_name,
+                    "product_url": product_url or "",
+                    "image_url": img_url or "",
+                    "price_ungraded": price,
+                }
+            )
+
+    return rows
+
+
+def scrape_sportscardspro(data: dict, set_year: int, set_brand: str) -> None:
+    """
+    Enrich card objects in *data* with image_url and price_ungraded sourced
+    from SportsCardsPro.
+
+    Only fills in fields that are currently null/missing -- Beckett images
+    (already set) take precedence. Modifies *data* in place.
+
+    *set_brand* should be the short brand name used in SCP queries, e.g.
+    "Donruss Optic".
+    """
+    cards_section = data.get("cards", {})
+
+    # Collect all unique player names across every pool.
+    # Track which card dicts reference each player so we can write results back.
+    player_cards: dict[str, list[dict]] = {}
+
+    def _register(cards: list[dict]):
+        for card in cards:
+            name = card.get("name", "").strip()
+            if not name or name.lower() in ("cards", ""):
+                continue
+            player_cards.setdefault(name, []).append(card)
+
+    _register(cards_section.get("base", []))
+    _register(cards_section.get("rated_rookies", []))
+    for cat_cards in cards_section.get("inserts", {}).values():
+        _register(cat_cards)
+
+    total = len(player_cards)
+    print(f"  SportsCardsPro: enriching {total} unique player(s)...")
+
+    set_name_fragment = set_brand  # e.g. "Donruss Optic"
+    enriched = 0
+    failed = 0
+
+    for idx, (player_name, cards) in enumerate(player_cards.items(), 1):
+        print(f"    [{idx}/{total}] {player_name}...", end=" ", flush=True)
+
+        rows = _scrape_scp_player(player_name, set_year, set_brand)
+        if not rows:
+            print("no results")
+            failed += 1
+            continue
+
+        # For each card referencing this player, find the best matching row
+        matched_any = False
+        for card in cards:
+            # Only fill in fields that are not already set
+            needs_image = not card.get("image_url")
+            needs_price = card.get("price_ungraded") is None
+
+            if not needs_image and not needs_price:
+                continue
+
+            best = _best_scp_match(
+                rows,
+                player_name=player_name,
+                card_number=card.get("number"),
+                set_name_fragment=set_name_fragment,
+            )
+            if best is None:
+                continue
+
+            if needs_image and best.get("image_url"):
+                card["image_url"] = best["image_url"]
+                matched_any = True
+
+            if needs_price and best.get("price_ungraded") is not None:
+                card["price_ungraded"] = best["price_ungraded"]
+                matched_any = True
+
+        if matched_any:
+            enriched += 1
+            print("ok")
+        else:
+            print("no match")
+            failed += 1
+
+    print(f"  SportsCardsPro: {enriched} enriched, {failed} not matched")
+
+
+# ---------------------------------------------------------------------------
 # Image downloading
 # ---------------------------------------------------------------------------
 
@@ -776,9 +1055,16 @@ def _slug_from_url(url: str) -> str:
     """Derive a short stable filename slug from a CDN URL."""
     # Use the last path segment (filename), strip query string
     path = url.split("?")[0].rstrip("/")
-    basename = path.split("/")[-1]
+    parts = path.split("/")
+    basename = parts[-1]
     # Remove extension -- we'll add it back from content-type
     name, _ = os.path.splitext(basename)
+    # For SportsCardsPro CDN URLs the last segment is a bare resolution number
+    # (e.g. "120") and the actual unique identifier is the parent segment.
+    # Detect this and use "<parent>-<size>" as the slug instead.
+    if re.fullmatch(r"\d+", name) and len(parts) >= 2:
+        parent = re.sub(r"[^a-zA-Z0-9_-]", "-", parts[-2])[:60]
+        name = f"{parent}-{name}"
     # Sanitize
     name = re.sub(r"[^a-zA-Z0-9_-]", "-", name)[:80]
     return name or hashlib.md5(url.encode()).hexdigest()[:12]
@@ -876,6 +1162,12 @@ def scrape_set(meta: dict, out_dir: str, images_dir: str | None, base_url_prefix
         return
 
     data = parse_beckett_page(soup, meta)
+
+    # Enrich with SportsCardsPro images and prices
+    scp_brand = STATIC_SET_FIELDS.get(meta["id"], {}).get("_scp_brand")
+    if scp_brand:
+        print("  Fetching SportsCardsPro data...")
+        scrape_sportscardspro(data, meta["year"], scp_brand)
 
     if images_dir is not None:
         # Collect all unique CDN URLs from the parsed data
