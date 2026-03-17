@@ -773,22 +773,25 @@ def _collect_list_items(heading) -> list[str]:
 SCP_SEARCH_URL = "https://www.sportscardspro.com/search-products?q={query}&type=prices"
 
 # Concurrency: how many simultaneous in-flight requests to SCP.
-SCP_CONCURRENCY = 15
+# SCP silently rate-limits by returning 200 OK with an empty table rather
+# than a 429. Keep concurrency low and jitter high to avoid triggering it.
+SCP_CONCURRENCY = 5
 
 # Per-worker base delay range (seconds) between successive requests.
-SCP_JITTER_MIN = 0.3
-SCP_JITTER_MAX = 0.8
+SCP_JITTER_MIN = 1.0
+SCP_JITTER_MAX = 2.5
 
 # Backoff config for throttle responses (HTTP 429 / 503).
-SCP_BACKOFF_BASE = 1.0  # seconds; multiplied by 2^attempt
-SCP_BACKOFF_JITTER = 1.0  # random(0, this) added on top
+SCP_BACKOFF_BASE = 2.0  # seconds; multiplied by 2^attempt
+SCP_BACKOFF_JITTER = 2.0  # random(0, this) added on top
 SCP_MAX_RETRIES = 3
 
 # Retry config for empty results (200 OK but zero rows parsed).
-# SCP sometimes returns an empty table on first hit due to transient caching.
-SCP_EMPTY_RETRIES = 2  # max additional attempts after an empty response
-SCP_EMPTY_RETRY_BASE = 2.0  # seconds; multiplied by 2^attempt
-SCP_EMPTY_RETRY_JITTER = 1.0  # random(0, this) added on top
+# SCP returns an empty table both transiently and when it is rate-limiting.
+# Use a longer base delay so the server has time to recover.
+SCP_EMPTY_RETRIES = 3  # max additional attempts after an empty response
+SCP_EMPTY_RETRY_BASE = 4.0  # seconds; multiplied by 2^attempt
+SCP_EMPTY_RETRY_JITTER = 2.0  # random(0, this) added on top
 
 # Parallel qualifier words that indicate a non-base parallel variant.
 _PARALLEL_KEYWORDS = re.compile(

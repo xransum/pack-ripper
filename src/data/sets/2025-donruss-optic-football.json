@@ -235,112 +235,128 @@
         "name": "Joe Burrow",
         "team": "Cincinnati Bengals",
         "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg",
-        "is_rookie": false
+        "is_rookie": false,
+        "price_ungraded": 1.59
       },
       {
         "number": 2,
         "name": "Ja’Marr Chase",
         "team": "Cincinnati Bengals",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/jhfo364zoxgcwy5j-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 805.0
       },
       {
         "number": 3,
         "name": "Brock Bowers",
         "team": "Las Vegas Raiders",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/weujedme6gol4fy3-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.7
       },
       {
         "number": 4,
         "name": "Brian Thomas Jr.",
         "team": "Jacksonville Jaguars",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/qtwvquox3cfcd2g5-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 5,
         "name": "Emmitt Smith",
         "team": "Dallas Cowboys",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/cyz4reehy4dz62no-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.38
       },
       {
         "number": 6,
         "name": "Tyrone Tracy Jr.",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrtrrjtv4c4n7bzmhj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.07
       },
       {
         "number": 7,
         "name": "Jaxon Smith-Njigba",
         "team": "Seattle Seahawks",
         "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-retro-2015-jaxon-smith-njigba.jpg",
-        "is_rookie": false
+        "is_rookie": false,
+        "price_ungraded": 1.81
       },
       {
         "number": 8,
         "name": "Caleb Williams",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrg66qgdayleys4mzn-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 4.0
       },
       {
         "number": 9,
         "name": "Alvin Kamara",
         "team": "New Orleans Saints",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/hjboe6mhlz7li4la-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 422.45
       },
       {
         "number": 10,
         "name": "Jameson Williams",
         "team": "Detroit Lions",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/gaqunqyi2jkz5dq4-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.94
       },
       {
         "number": 11,
         "name": "Mike Evans",
         "team": "Tampa Bay Buccaneers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ewsm4635nmohj4mi-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 12,
         "name": "Hines Ward",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/qi63a6oziwgyazbg-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 13,
         "name": "Tee Higgins",
         "team": "Cincinnati Bengals",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/hzyh4xmzpgtjohqp-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 14,
         "name": "Jalen Hurts",
         "team": "Philadelphia Eagles",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ok3wtqftocpgmgtg-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 15,
         "name": "Saquon Barkley",
         "team": "Philadelphia Eagles",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/7ygle3m7i4v2dkvj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.25
       },
       {
         "number": 16,
         "name": "Deion Sanders",
         "team": "Atlanta Falcons",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrw5ntab3ke2lgt4ni-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 193.75
       },
       {
         "number": 17,
@@ -354,53 +370,54 @@
         "number": 18,
         "name": "Budda Baker",
         "team": "Arizona Cardinals",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr2tzuu4zc4r7ac7rk-120.jpg",
-        "is_rookie": false,
-        "price_ungraded": 105.63
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/eeqdfkyidafy2erj-120.jpg",
+        "is_rookie": false
       },
       {
         "number": 19,
         "name": "Calvin Johnson",
         "team": "Detroit Lions",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrh6yf4yqjsx5d4pmf-120.jpg",
-        "is_rookie": false,
-        "price_ungraded": 1.0
+        "image_url": null,
+        "is_rookie": false
       },
       {
         "number": 20,
         "name": "Rashod Bateman",
         "team": "Baltimore Ravens",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ulzcfd2t2fbpky5x-120.jpg",
         "is_rookie": false
       },
       {
         "number": 21,
         "name": "Terrell Owens",
         "team": "Philadelphia Eagles",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/idmrrtpo6n2xiq23-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lp5o677kk46pfj7p-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 0.99
+        "price_ungraded": 0.3
       },
       {
         "number": 22,
         "name": "Dalton Schultz",
         "team": "Houston Texans",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/3wxjag7i4aeppgr5-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.25
       },
       {
         "number": 23,
         "name": "Jayden Daniels",
         "team": "Washington Commanders",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/5irkhi53a23dgixr-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.19
       },
       {
         "number": 24,
         "name": "CeeDee Lamb",
         "team": "Dallas Cowboys",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrji4ilsgsishf7ck2-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.74
       },
       {
         "number": 25,
@@ -413,43 +430,49 @@
         "number": 26,
         "name": "Ladd McConkey",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrxy5whgtld4pgeums-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 425.0
       },
       {
         "number": 27,
         "name": "Kurt Warner",
         "team": "St. Louis Rams",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/eh6umlpr6k546wkj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.55
       },
       {
         "number": 28,
         "name": "DeVonta Smith",
         "team": "Philadelphia Eagles",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/hfymw2y6ssl57vtx-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.12
       },
       {
         "number": 29,
         "name": "Jamaal Charles",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/2eqcy2ewhdauhb5e-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.25
       },
       {
         "number": 30,
         "name": "Deebo Samuel",
         "team": "Washington Commanders",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/h47oxqi53mn5twby-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 31,
         "name": "Bo Nix",
         "team": "Denver Broncos",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrjdpkunuqqu2in7b6-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 56.0
       },
       {
         "number": 32,
@@ -462,65 +485,71 @@
         "number": 33,
         "name": "Tyler Allgeier",
         "team": "Atlanta Falcons",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fasjalmjtcy2bjdy-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 34,
         "name": "Josh Downs",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/y7i3gdadj4eoxmx4-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.29
       },
       {
         "number": 35,
         "name": "Jordan Addison",
         "team": "Minnesota Vikings",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/l2roqcm3qxxgpywq-120.jpg",
         "is_rookie": false
       },
       {
         "number": 36,
         "name": "Jim Kelly",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ticgvgs7avg2g3u3-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.32
       },
       {
         "number": 37,
         "name": "Arik Armstead",
         "team": "Jacksonville Jaguars",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcaxxrzysnnvxldjy-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 3.5
       },
       {
         "number": 38,
         "name": "Brock Purdy",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/i372lpznpxubm7op-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.89
       },
       {
         "number": 39,
         "name": "Tua Tagovailoa",
         "team": "Miami Dolphins",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/6aj4rpj3b4j5mbqs-120.jpg",
         "is_rookie": false
       },
       {
         "number": 40,
         "name": "Patrick Mahomes II",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/cacu5qjokmy3zyj2-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1125.0
       },
       {
         "number": 41,
         "name": "Jayden Reed",
         "team": "Green Bay Packers",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/xu3ljeb6spj27zlr-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrforecfjvlsy5ztn7-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 1.24
+        "price_ungraded": 2.0
       },
       {
         "number": 42,
@@ -533,15 +562,17 @@
         "number": 43,
         "name": "Devin Hester",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/v7z5yq37qknmytwj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.88
       },
       {
         "number": 44,
         "name": "Khalil Shakir",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr2k4pfgwcj3upjaz7-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.67
       },
       {
         "number": 45,
@@ -554,29 +585,33 @@
         "number": 46,
         "name": "J.J. McCarthy",
         "team": "Minnesota Vikings",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbzqkxlyambhyjiff-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.75
       },
       {
         "number": 47,
         "name": "Drake Maye",
         "team": "New England Patriots",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/o2ana5narxcuktfz-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.67
       },
       {
         "number": 48,
         "name": "George Kittle",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/hadopffijqm5k5ed-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.6
       },
       {
         "number": 49,
         "name": "Jonathan Taylor",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr53hiau72kp4mbwpz-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 34.0
       },
       {
         "number": 50,
@@ -603,8 +638,9 @@
         "number": 53,
         "name": "Derek Carr",
         "team": "New Orleans Saints",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/g6orqzo3krpwhy5u-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 54,
@@ -624,84 +660,93 @@
         "number": 56,
         "name": "James Lofton",
         "team": "Green Bay Packers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5qgcliihfayan4vj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 3.0
       },
       {
         "number": 57,
         "name": "Drew Bledsoe",
         "team": "New England Patriots",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lkik3zpfq4qqzrvd-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.75
       },
       {
         "number": 58,
         "name": "Tony Dorsett",
         "team": "Dallas Cowboys",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lw6wjgecjjs2p4v7-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 59,
         "name": "Eric Dickerson",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzrwyfxdwefn7vzas-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 60,
         "name": "Daunte Culpepper",
         "team": "Miami Dolphins",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/qrkoxqkad4h2zodg-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 61,
         "name": "Trent Green",
         "team": "Kansas City Chiefs",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/m2uc4fjhg3cyizmh-120.jpg",
         "is_rookie": false
       },
       {
         "number": 62,
         "name": "Chuba Hubbard",
         "team": "Carolina Panthers",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ml7xgkplvgcrntw2-120.jpg",
         "is_rookie": false
       },
       {
         "number": 63,
         "name": "Amon-Ra St. Brown",
         "team": "Detroit Lions",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corritr3wycbldueowjt-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.17
       },
       {
         "number": 64,
         "name": "Davante Adams",
         "team": "Los Angeles Rams",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrnoeyp6lwnpmhmd2e-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 65,
         "name": "Darnell Mooney",
         "team": "Atlanta Falcons",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ghswjfjjn3vydax7-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 66,
         "name": "Rex Grossman",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ostnfji5xquzhxu7-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.42
       },
       {
         "number": 67,
         "name": "Greg Zuerlein",
         "team": "New York Jets",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/o3wr43h5ibw7xbnj-120.jpg",
         "is_rookie": false
       },
       {
@@ -715,15 +760,17 @@
         "number": 69,
         "name": "Zach Charbonnet",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/eqoqvgrh6g72c2do-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 70,
         "name": "Josh Allen",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ycw22rqigjfjchal-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.35
       },
       {
         "number": 71,
@@ -736,8 +783,9 @@
         "number": 72,
         "name": "Anthony Richardson",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/kfhhejh7javllo5o-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 73,
@@ -750,43 +798,48 @@
         "number": 74,
         "name": "Trey McBride",
         "team": "Arizona Cardinals",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/w2rzcijnzsujbfcn-120.jpg",
         "is_rookie": false
       },
       {
         "number": 75,
         "name": "Aaron Rodgers",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fsxxmp5vots4l3nf-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.81
       },
       {
         "number": 76,
         "name": "David Njoku",
         "team": "Cleveland Browns",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/4yyvxv3ay5kppvin-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 77,
         "name": "Jakobi Meyers",
         "team": "Las Vegas Raiders",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fjml4mlh275iqcz7-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.32
       },
       {
         "number": 78,
         "name": "Mike Williams",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ysdowkqilj4mgswl-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.25
       },
       {
         "number": 79,
         "name": "Jahmyr Gibbs",
         "team": "Detroit Lions",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/y2qschj33o42n5zy-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.5
       },
       {
         "number": 80,
@@ -799,15 +852,17 @@
         "number": 81,
         "name": "Dak Prescott",
         "team": "Dallas Cowboys",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/tjjfd2f3slx7mn4h-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.99
       },
       {
         "number": 82,
         "name": "Chris Jones",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrxpes7uei76bl5l57-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.68
       },
       {
         "number": 83,
@@ -820,8 +875,9 @@
         "number": 84,
         "name": "Luke Kuechly",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/qhxsq6ysylu5hek5-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.37
       },
       {
         "number": 85,
@@ -835,23 +891,24 @@
         "number": 86,
         "name": "De’Von Achane",
         "team": "Miami Dolphins",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/7dqc3s5gftfo7ocr-120.jpg",
-        "is_rookie": false,
-        "price_ungraded": 0.99
+        "image_url": null,
+        "is_rookie": false
       },
       {
         "number": 87,
         "name": "Blake Grupe",
         "team": "New Orleans Saints",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/bb2ijpaeeyfzqhi3-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 88,
         "name": "Greg Rousseau",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/boydsqocsdlomd44-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.45
       },
       {
         "number": 89,
@@ -864,8 +921,9 @@
         "number": 90,
         "name": "Kyle Pitts",
         "team": "Atlanta Falcons",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/es5bpz5hcr357nmh-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 91,
@@ -878,92 +936,102 @@
         "number": 92,
         "name": "Xavier Legette",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrryj7khpycorzg4j3-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 3.62
       },
       {
         "number": 93,
         "name": "Marquise Brown",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/zmchyandibtpupyw-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.01
       },
       {
         "number": 94,
         "name": "Carl Eller",
         "team": "Minnesota Vikings",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/xfwabqe6jqgc564w-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 95,
         "name": "Garrett Wilson",
         "team": "New York Jets",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/7tsmz3q5okvobsxx-120.jpg",
         "is_rookie": false
       },
       {
         "number": 96,
         "name": "Terrell Suggs",
         "team": "Baltimore Ravens",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/4zsr3acvscap5z2m-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.62
       },
       {
         "number": 97,
         "name": "Kenneth Gainwell",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/m3tcx4uqdbwt5ovc-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.99
       },
       {
         "number": 98,
         "name": "Derwin James Jr.",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/66yyevxyp3absmdh-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.32
       },
       {
         "number": 99,
         "name": "Fred Warner",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/nrivpown5lnbgrlb-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 100,
         "name": "T.J. Watt",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/6uf2tg4tkqjoq3pw-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.39
       },
       {
         "number": 101,
         "name": "Isaiah Likely",
         "team": "Baltimore Ravens",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/znbtwoff5v3eil35-120.jpg",
         "is_rookie": false
       },
       {
         "number": 102,
         "name": "Chris Godwin",
         "team": "Tampa Bay Buccaneers",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/t64sk6c6qg5iyq4q-120.jpg",
         "is_rookie": false
       },
       {
         "number": 103,
         "name": "Charles Woodson",
         "team": "Green Bay Packers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/mzjx7zzzypw4pp22-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.99
       },
       {
         "number": 104,
         "name": "Leonard Williams",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/32vetioenlerllwd-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.99
       },
       {
         "number": 105,
@@ -976,64 +1044,72 @@
         "number": 106,
         "name": "Travis Etienne Jr.",
         "team": "Jacksonville Jaguars",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/wvewakwilctk6lvj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 107,
         "name": "Terry McLaurin",
         "team": "Washington Commanders",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ykfpg4wduqvutgd6-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.5
       },
       {
         "number": 108,
         "name": "Najee Harris",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrlpw3bkzjurixbnoo-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.05
       },
       {
         "number": 109,
         "name": "Justin Herbert",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lnf575t3yq6z37lg-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.35
       },
       {
         "number": 110,
         "name": "Calvin Ridley",
         "team": "Tennessee Titans",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lsihgg2rsoforegn-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 111,
         "name": "James Conner",
         "team": "Arizona Cardinals",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/q3ggkdb523qxhmyq-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 112,
         "name": "Derrick Henry",
         "team": "Baltimore Ravens",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrujauelviqfpm6pyz-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 360.04
       },
       {
         "number": 113,
         "name": "Donovan McNabb",
         "team": "Washington Redskins",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/bp2s35ut74xjzubq-120.jpg",
         "is_rookie": false
       },
       {
         "number": 114,
         "name": "DJ Moore",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/5rsxcgwpzojhgnj2-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.32
       },
       {
         "number": 115,
@@ -1053,32 +1129,32 @@
         "number": 117,
         "name": "David Montgomery",
         "team": "Detroit Lions",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/correpbb7zd3pbzeltmr-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 3.0
       },
       {
         "number": 118,
         "name": "Bijan Robinson",
         "team": "Atlanta Falcons",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/5vklzzw6fpr5eudj-120.jpg",
-        "is_rookie": false,
-        "price_ungraded": 1.21
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/st762irnpccuhfgf-120.jpg",
+        "is_rookie": false
       },
       {
         "number": 119,
         "name": "Christian McCaffrey",
         "team": "San Francisco 49ers",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/q65r5l6ajrxj3ovp-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrtlxappmo4v6zc25g-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 0.99
+        "price_ungraded": 1.27
       },
       {
         "number": 120,
         "name": "Zay Flowers",
         "team": "Baltimore Ravens",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/5v56wa36xtrxyxal-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7ajjiz7efwewtyky-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 0.99
+        "price_ungraded": 1.17
       },
       {
         "number": 121,
@@ -1091,15 +1167,14 @@
         "number": 122,
         "name": "Art Monk",
         "team": "Washington Redskins",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/joof4ydutzqwdlq4-120.jpg",
-        "is_rookie": false,
-        "price_ungraded": 1.55
+        "image_url": null,
+        "is_rookie": false
       },
       {
         "number": 123,
         "name": "Xavier Worthy",
         "team": "Kansas City Chiefs",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/t7guml24oexyuylo-120.jpg",
+        "image_url": null,
         "is_rookie": false
       },
       {
@@ -1114,16 +1189,17 @@
         "number": 125,
         "name": "Ed Reed",
         "team": "Houston Texans",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ofjwdulivh566jvh-120.jpg",
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrixr3dw2vio5rwbpr-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.57
       },
       {
         "number": 126,
         "name": "Ricky Williams",
         "team": "Baltimore Ravens",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/3p6bxh753tn6vxwp-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3sassxfjobancl3h-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 0.99
+        "price_ungraded": 1.81
       },
       {
         "number": 127,
@@ -1137,16 +1213,17 @@
         "number": 128,
         "name": "Josh Jacobs",
         "team": "Green Bay Packers",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/pmwgo3m4l2raeclz-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbgnkn66cqpliixo5-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 1.39
+        "price_ungraded": 1.5
       },
       {
         "number": 129,
         "name": "Christian Kirk",
         "team": "Houston Texans",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ooc4qr3epb4tsl3h-120.jpg",
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/7abnxedm4xehvj4x-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.27
       },
       {
         "number": 130,
@@ -1160,22 +1237,25 @@
         "number": 131,
         "name": "Michael Pittman Jr.",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7x2v2jjsn4laxiik-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.17
       },
       {
         "number": 132,
         "name": "Warren Moon",
         "team": "Houston Oilers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/udkjiwbaqktsuhee-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.71
       },
       {
         "number": 133,
         "name": "Kenneth Walker III",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fb4yk3f6w3e3xih5-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.5
       },
       {
         "number": 134,
@@ -1188,64 +1268,72 @@
         "number": 135,
         "name": "Travis Kelce",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/awjlfwjspcgh4drx-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.46
       },
       {
         "number": 136,
         "name": "Tutu Atwell",
         "team": "Los Angeles Rams",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/53haspbmg6sw7wyi-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 137,
         "name": "Vernon Davis",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/mt6mz4lxhs3qbiaw-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 138,
         "name": "James Cook",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/vwynzvzp5rvi2aeu-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.96
       },
       {
         "number": 139,
         "name": "Bryce Young",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrtcb3jlqrlmsu2bon-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 33.0
       },
       {
         "number": 140,
         "name": "Jaylen Warren",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/f7rjybd5lteiqlx6-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 141,
         "name": "Rich Gannon",
         "team": "Oakland Raiders",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/owpgvai2oylm3nln-120.jpg",
         "is_rookie": false
       },
       {
         "number": 142,
         "name": "Steven Jackson",
         "team": "St. Louis Rams",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzodawatg4w74nkpr-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 233.36
       },
       {
         "number": 143,
         "name": "Nico Collins",
         "team": "Houston Texans",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/bfwygpn43emwa4hg-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 144,
@@ -1258,84 +1346,95 @@
         "number": 145,
         "name": "T.J. Hockenson",
         "team": "Minnesota Vikings",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/e3bgwgrday4c6xzr-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.69
       },
       {
         "number": 146,
         "name": "Trevor Lawrence",
         "team": "Jacksonville Jaguars",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrvkmdubtmkmeexmhb-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.88
       },
       {
         "number": 147,
         "name": "Isiah Pacheco",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/p5h3cpje3yxmklyy-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.59
       },
       {
         "number": 148,
         "name": "Baker Mayfield",
         "team": "Tampa Bay Buccaneers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lp52wu4m6r4qh43e-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.3
       },
       {
         "number": 149,
         "name": "Jared Goff",
         "team": "Detroit Lions",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3g2k4h7kb6neaml4-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.88
       },
       {
         "number": 150,
         "name": "Tyreek Hill",
         "team": "Miami Dolphins",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ajr4a5n24ym4xtms-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.7
       },
       {
         "number": 151,
         "name": "Rome Odunze",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrxk2usjgd5oqsgpec-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 152,
         "name": "Victor Cruz",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/zjg7lsfage6ty7wt-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 153,
         "name": "Drake London",
         "team": "Atlanta Falcons",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrnqjnayrjuivkuc7v-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 154,
         "name": "D’Andre Swift",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fyt7clnn6ik53gpi-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.59
       },
       {
         "number": 155,
         "name": "Pat Freiermuth",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/2soom4rptys4a2az-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 2.0
       },
       {
         "number": 156,
         "name": "Zach Ertz",
         "team": "Washington Commanders",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/qnrhkbbzwilhj4zs-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/sfkixts33i73fqxg-120.jpg",
         "is_rookie": false
       },
       {
@@ -1350,15 +1449,14 @@
         "number": 158,
         "name": "Myles Garrett",
         "team": "Cleveland Browns",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrs7d5mez4kjbltdqs-120.jpg",
-        "is_rookie": false,
-        "price_ungraded": 1524.77
+        "image_url": null,
+        "is_rookie": false
       },
       {
         "number": 159,
         "name": "Vinny Testaverde",
         "team": "New York Jets",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/jrvy3ant5l2mgu6v-120.jpg",
         "is_rookie": false
       },
       {
@@ -1372,15 +1470,17 @@
         "number": 161,
         "name": "Stefon Diggs",
         "team": "New England Patriots",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr4ywl3lchula65ztp-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 4.99
       },
       {
         "number": 162,
         "name": "C.J. Stroud",
         "team": "Houston Texans",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ykuhhpomp7gnidid-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.29
       },
       {
         "number": 163,
@@ -1394,83 +1494,92 @@
         "name": "Justin Jefferson",
         "team": "Minnesota Vikings",
         "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-sunday-kings-justin-jefferson.jpg",
-        "is_rookie": false
+        "is_rookie": false,
+        "price_ungraded": 1.24
       },
       {
         "number": 165,
         "name": "DeAndre Hopkins",
         "team": "Baltimore Ravens",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/vkg3htkiikxs7iqf-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 9.0
       },
       {
         "number": 166,
         "name": "Kyler Murray",
         "team": "Arizona Cardinals",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/oarfbbeoq5cxqqyi-120.jpg",
         "is_rookie": false
       },
       {
         "number": 167,
         "name": "Justin Fields",
         "team": "New York Jets",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/o5grv4secjk762zc-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 168,
         "name": "Brandon Aiyuk",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/d6tcgm6ehqjb5men-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 169,
         "name": "Cooper Kupp",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/roaggfnivwqnojhj-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.51
       },
       {
         "number": 170,
         "name": "Cameron Jordan",
         "team": "New Orleans Saints",
-        "image_url": null,
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/o2mlxsfsa5nzde4d-120.jpg",
         "is_rookie": false
       },
       {
         "number": 171,
         "name": "John Elway",
         "team": "Denver Broncos",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/e5wrxm4y2wzr2yam-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.49
       },
       {
         "number": 172,
         "name": "Tyjae Spears",
         "team": "Tennessee Titans",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fxlbp44rhqudouju-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 173,
         "name": "Adam Thielen",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5z3k2opwgvrilxqd-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 4.99
       },
       {
         "number": 174,
         "name": "Ricky Pearsall",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdrepgrc6g7wxt2ys-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 3.25
       },
       {
         "number": 175,
         "name": "Braelon Allen",
         "team": "New York Jets",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ein63s4thi3ecaag-120.jpg",
+        "image_url": null,
         "is_rookie": false
       },
       {
@@ -1484,9 +1593,9 @@
         "number": 177,
         "name": "Jordan Love",
         "team": "Green Bay Packers",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/nnquvreb5kwe4te2-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/xc2kl5bocogkt2ew-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 1.88
+        "price_ungraded": 2.24
       },
       {
         "number": 178,
@@ -1500,16 +1609,17 @@
         "number": 179,
         "name": "Rashee Rice",
         "team": "Kansas City Chiefs",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ejfnpgudixv63hhb-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrgdrylpumobq55qtp-120.jpg",
         "is_rookie": false,
-        "price_ungraded": 1.74
+        "price_ungraded": 1.25
       },
       {
         "number": 180,
         "name": "DK Metcalf",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/w3kjkdl2yzn4rs4k-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.59
       },
       {
         "number": 181,
@@ -1522,64 +1632,73 @@
         "number": 182,
         "name": "Malik Nabers",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ukoy7yprvlsopcis-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 183,
         "name": "Maxx Crosby",
         "team": "Las Vegas Raiders",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/whclvigsoxvpoyhf-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.99
       },
       {
         "number": 184,
         "name": "Eli Manning",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/nvwllohifpq2vjft-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.0
       },
       {
         "number": 185,
         "name": "Edgerrin James",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrtvrewqhisa6ncsah-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.23
       },
       {
         "number": 186,
         "name": "Sam Darnold",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/gnqtv2cpafdu7njw-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.67
       },
       {
         "number": 187,
         "name": "Keenan Allen",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5kikujz7om43hedy-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 150.0
       },
       {
         "number": 188,
         "name": "Terry Bradshaw",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/kw6i4gi7nn3ux2mi-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.39
       },
       {
         "number": 189,
         "name": "Jake Plummer",
         "team": "Arizona Cardinals",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr66tkw22mtcdupt6d-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 190,
         "name": "Drew Brees",
         "team": "New Orleans Saints",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/teaar6icvo74v4hb-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.65
       },
       {
         "number": 191,
@@ -1592,22 +1711,25 @@
         "number": 192,
         "name": "Puka Nacua",
         "team": "Los Angeles Rams",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corre6dy27bvgeg6ophm-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.79
       },
       {
         "number": 193,
         "name": "Tank Bigsby",
         "team": "Jacksonville Jaguars",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/65cof37mdco2rj7g-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.5
       },
       {
         "number": 194,
         "name": "Jauan Jennings",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/kzg7ptobetr4cgmn-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 1.78
       },
       {
         "number": 195,
@@ -1620,29 +1742,33 @@
         "number": 196,
         "name": "Sam LaPorta",
         "team": "Detroit Lions",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/7qwgwx77vilbkoay-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 197,
         "name": "Chase Brown",
         "team": "Cincinnati Bengals",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/o3u2hlp7tv46osaf-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 198,
         "name": "Matthew Stafford",
         "team": "Los Angeles Rams",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/bevoid64bf2zdxsz-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.06
       },
       {
         "number": 199,
         "name": "Mark Andrews",
         "team": "Baltimore Ravens",
-        "image_url": null,
-        "is_rookie": false
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/c3u7fmzmdvq7vdih-120.jpg",
+        "is_rookie": false,
+        "price_ungraded": 0.99
       },
       {
         "number": 200,
@@ -1658,35 +1784,40 @@
         "name": "Travis Hunter",
         "team": "Jacksonville Jaguars",
         "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
-        "is_rookie": true
+        "is_rookie": true,
+        "price_ungraded": 1.69
       },
       {
         "number": 202,
         "name": "Ashton Jeanty",
         "team": "Las Vegas Raiders",
         "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
-        "is_rookie": true
+        "is_rookie": true,
+        "price_ungraded": 1.67
       },
       {
         "number": 203,
         "name": "Shedeur Sanders",
         "team": "Cleveland Browns",
         "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
-        "is_rookie": true
+        "is_rookie": true,
+        "price_ungraded": 1.74
       },
       {
         "number": 204,
         "name": "Colston Loveland",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ljvxfjk27fexw7gi-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.9
       },
       {
         "number": 205,
         "name": "Matthew Golden",
         "team": "Green Bay Packers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/7oiisylhsh7iuqny-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.3
       },
       {
         "number": 206,
@@ -1699,22 +1830,25 @@
         "number": 207,
         "name": "Jahdae Barron",
         "team": "Denver Broncos",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/4q3pw34tadfzsoxt-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.99
       },
       {
         "number": 208,
         "name": "RJ Harvey",
         "team": "Denver Broncos",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/vsaqtfr63fv7g5ta-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.44
       },
       {
         "number": 209,
         "name": "Tetairoa McMillan",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/dxj254hcwsmew6ng-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 2.11
       },
       {
         "number": 210,
@@ -1784,9 +1918,8 @@
         "number": 218,
         "name": "Ollie Gordon II",
         "team": "Miami Dolphins",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/4qyik4lblcabjlss-120.jpg",
-        "is_rookie": true,
-        "price_ungraded": 1.25
+        "image_url": null,
+        "is_rookie": true
       },
       {
         "number": 219,
@@ -1808,36 +1941,41 @@
         "number": 221,
         "name": "Savion Williams",
         "team": "Green Bay Packers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/6bwf2jtxy3anzb2l-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.39
       },
       {
         "number": 222,
         "name": "Trevor Etienne",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/dykjezolpxewsqdy-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.25
       },
       {
         "number": 223,
         "name": "Tyler Shough",
         "team": "New Orleans Saints",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/x3xht6wxsncgrcug-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.94
       },
       {
         "number": 224,
         "name": "Jackson Hawes",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrnk4mtty7f57cfahh-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 2.0
       },
       {
         "number": 225,
         "name": "Jayden Higgins",
         "team": "Houston Texans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr33wvlbxsin5siowp-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.5
       },
       {
         "number": 226,
@@ -1850,43 +1988,49 @@
         "number": 227,
         "name": "Tyler Loop",
         "team": "Baltimore Ravens",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ghqshhs6x6l5hzae-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.0
       },
       {
         "number": 228,
         "name": "Cam Skattebo",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/74iam42wkw7gujsy-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.75
       },
       {
         "number": 229,
         "name": "Tre Harris",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr6bmgzy4bdbcybat4-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.46
       },
       {
         "number": 230,
         "name": "Donovan Ezeiruaku",
         "team": "Dallas Cowboys",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/2uy3hhq32t53652k-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.74
       },
       {
         "number": 231,
         "name": "Tez Johnson",
         "team": "Tampa Bay Buccaneers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrx4v2gg2zsswpdgxg-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.0
       },
       {
         "number": 232,
         "name": "Kaleb Johnson",
         "team": "Pittsburgh Steelers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/xln3pnsjb2ajxybb-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.6
       },
       {
         "number": 233,
@@ -1899,36 +2043,41 @@
         "number": 234,
         "name": "Tyler Warren",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/btxpr6sji6sgppkr-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.5
       },
       {
         "number": 235,
         "name": "Elic Ayomanor",
         "team": "Tennessee Titans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/so6rlty4yvjjjkrm-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.99
       },
       {
         "number": 236,
         "name": "Benjamin Morrison",
         "team": "Tampa Bay Buccaneers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/s5r5ayodo55o5bvk-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.01
       },
       {
         "number": 237,
         "name": "Alfred Collins",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/erbhzl44smyb7so3-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.35
       },
       {
         "number": 238,
         "name": "Dylan Sampson",
         "team": "Cleveland Browns",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corruriihpablyqysrqs-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.99
       },
       {
         "number": 239,
@@ -1948,8 +2097,9 @@
         "number": 241,
         "name": "Jaylin Noel",
         "team": "Houston Texans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/zxflh22z2u56fttv-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 3.0
       },
       {
         "number": 242,
@@ -1962,22 +2112,25 @@
         "number": 243,
         "name": "Kurtis Rourke",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/42daqsajkc2eyl4v-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.75
       },
       {
         "number": 244,
         "name": "Terrance Ferguson",
         "team": "Los Angeles Rams",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/mntaeijzuesqaf56-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.99
       },
       {
         "number": 245,
         "name": "Kyle Williams",
         "team": "New England Patriots",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/iy54mvp7goqdtydc-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.85
       },
       {
         "number": 246,
@@ -1991,15 +2144,17 @@
         "number": 247,
         "name": "Will Johnson",
         "team": "Arizona Cardinals",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/kbialjqtcdwte7ns-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.42
       },
       {
         "number": 248,
         "name": "TreVeyon Henderson",
         "team": "New England Patriots",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr6wgzitzb57ioiqd6-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 4.37
       },
       {
         "number": 249,
@@ -2021,8 +2176,9 @@
         "number": 251,
         "name": "Jalen Royals",
         "team": "Kansas City Chiefs",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrjyv6zsskdjvvcbjl-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.59
       },
       {
         "number": 252,
@@ -2035,30 +2191,33 @@
         "number": 253,
         "name": "Jalen Milroe",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr522yq63mbzihxbep-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 22.5
       },
       {
         "number": 254,
         "name": "Mitchell Evans",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/c5vjpc2546nm537g-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.02
       },
       {
         "number": 255,
         "name": "Riley Leonard",
         "team": "Indianapolis Colts",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/2uyxnjnriodmioyi-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.75
       },
       {
         "number": 256,
         "name": "Malaki Starks",
         "team": "Baltimore Ravens",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr72wppak6jouundaf-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr2ky7ec2lgg7h3bpz-120.jpg",
         "is_rookie": true,
-        "price_ungraded": 1.36
+        "price_ungraded": 2.04
       },
       {
         "number": 257,
@@ -2072,17 +2231,15 @@
         "number": 258,
         "name": "DJ Giddens",
         "team": "Indianapolis Colts",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/yigi6qg6dgmes7hp-120.jpg",
-        "is_rookie": true,
-        "price_ungraded": 1.11
+        "image_url": null,
+        "is_rookie": true
       },
       {
         "number": 259,
         "name": "Graham Mertz",
         "team": "Houston Texans",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/jmjrfuh3x7kdt37j-120.jpg",
-        "is_rookie": true,
-        "price_ungraded": 1.75
+        "image_url": null,
+        "is_rookie": true
       },
       {
         "number": 260,
@@ -2136,44 +2293,49 @@
         "number": 266,
         "name": "Jihaad Campbell",
         "team": "Philadelphia Eagles",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/23ikpupdvc3l7f6e-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrhkjz5brdq6y5yklk-120.jpg",
         "is_rookie": true,
-        "price_ungraded": 1.48
+        "price_ungraded": 0.87
       },
       {
         "number": 267,
         "name": "Trey Amos",
         "team": "Washington Commanders",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/iicrd2nzwwyuhm3p-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.99
       },
       {
         "number": 268,
         "name": "Tahj Brooks",
         "team": "Cincinnati Bengals",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/rzcandcjpiyfycjh-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.0
       },
       {
         "number": 269,
         "name": "Chimere Dike",
         "team": "Tennessee Titans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr362stomimoyg2amz-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.2
       },
       {
         "number": 270,
         "name": "Nic Scourton",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/wlw5eymuqo6o5z6b-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 2.0
       },
       {
         "number": 271,
         "name": "KeAndre Lambert-Smith",
         "team": "Los Angeles Chargers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/pd25e7tq4ztorby6-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.42
       },
       {
         "number": 272,
@@ -2186,85 +2348,97 @@
         "number": 273,
         "name": "Jaxson Dart",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/67yrnvajhd6hohpp-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 2.38
       },
       {
         "number": 274,
         "name": "Mason Taylor",
         "team": "New York Jets",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/nsb7ztbvz65gyc2h-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.98
       },
       {
         "number": 275,
         "name": "Luther Burden III",
         "team": "Chicago Bears",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/hrmxuwe45j4b7xfo-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.74
       },
       {
         "number": 276,
         "name": "Walter Nolen",
         "team": "Arizona Cardinals",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/2tocfncckaxpamaa-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.29
       },
       {
         "number": 277,
         "name": "Nick Emmanwori",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/wq5fdnsygw7zgmnk-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.44
       },
       {
         "number": 278,
         "name": "Jordan James",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lartcbh7yybyj3rt-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.14
       },
       {
         "number": 279,
         "name": "Dont’e Thornton Jr.",
         "team": "Las Vegas Raiders",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri4mpsmh332ydhbpo-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.99
       },
       {
         "number": 280,
         "name": "Oluwafemi Oladejo",
         "team": "Tennessee Titans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/fqyxl4vt3lrq4zhc-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.99
       },
       {
         "number": 281,
         "name": "Jimmy Horn Jr.",
         "team": "Carolina Panthers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/lllay2m4rh4ks77f-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.0
       },
       {
         "number": 282,
         "name": "Devin Neal",
         "team": "New Orleans Saints",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/bebh4lvc3ssxqykj-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.19
       },
       {
         "number": 283,
         "name": "Kyle McCord",
         "team": "Philadelphia Eagles",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr4vbsrv34msn36prm-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.62
       },
       {
         "number": 284,
         "name": "Harold Fannin Jr.",
         "team": "Cleveland Browns",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdgl4xfxuu6ykpmh3-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.89
       },
       {
         "number": 285,
@@ -2284,51 +2458,57 @@
         "number": 287,
         "name": "Andres Borregales",
         "team": "New England Patriots",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/ervtd5orzfzjyt7y-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.45
       },
       {
         "number": 288,
         "name": "Woody Marks",
         "team": "Houston Texans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/cadzhdw3cdvi4hnk-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.29
       },
       {
         "number": 289,
         "name": "Jordan Watkins",
         "team": "San Francisco 49ers",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/f5fnx7o6s6kfr23b-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 0.86
       },
       {
         "number": 290,
         "name": "Jalon Walker",
         "team": "Atlanta Falcons",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/sl6fcxatntef5psq-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.13
       },
       {
         "number": 291,
         "name": "Kaden Prather",
         "team": "Buffalo Bills",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdyk7spyon3qpdlxo-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.99
       },
       {
         "number": 292,
         "name": "Jarquez Hunter",
         "team": "Los Angeles Rams",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrahz5wspblew5556y-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/q4tv3esxjtreliyj-120.jpg",
         "is_rookie": true,
-        "price_ungraded": 220.59
+        "price_ungraded": 2.0
       },
       {
         "number": 293,
         "name": "Cam Ward",
         "team": "Tennessee Titans",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/2ra5hqzkuo3woi2i-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.92
       },
       {
         "number": 294,
@@ -2350,37 +2530,41 @@
         "number": 296,
         "name": "Demetrius Knight Jr.",
         "team": "Cincinnati Bengals",
-        "image_url": "/pack-ripper/images/2025-donruss-optic-football/hnfxrrscpu66qmkl-120.jpg",
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr4htjdkamd6og2wj2-120.jpg",
         "is_rookie": true,
-        "price_ungraded": 0.01
+        "price_ungraded": 1.04
       },
       {
         "number": 297,
         "name": "Andrew Mukuba",
         "team": "Philadelphia Eagles",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/4zaa2hoy55qkezcf-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 2.51
       },
       {
         "number": 298,
         "name": "Damien Martinez",
         "team": "Seattle Seahawks",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrigmu2cymo3sqjgri-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.0
       },
       {
         "number": 299,
         "name": "Tommy Mellott",
         "team": "Las Vegas Raiders",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/zvqjxl2bxcdy23az-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.59
       },
       {
         "number": 300,
         "name": "Abdul Carter",
         "team": "New York Giants",
-        "image_url": null,
-        "is_rookie": true
+        "image_url": "/pack-ripper/images/2025-donruss-optic-football/pxihqhs4mve2gay6-120.jpg",
+        "is_rookie": true,
+        "price_ungraded": 1.34
       }
     ],
     "inserts": {
@@ -2401,20 +2585,21 @@
           "number": 2,
           "name": "Brian Thomas Jr.",
           "team": "Jacksonville Jaguars",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzdl5bzf5c3hx3j27-120.jpg",
+          "price_ungraded": 300.0
         },
         {
           "number": 3,
           "name": "Derrick Henry",
           "team": "Baltimore Ravens",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrujauelviqfpm6pyz-120.jpg",
+          "price_ungraded": 360.04
         },
         {
           "number": 4,
           "name": "Calvin Johnson",
           "team": "Detroit Lions",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr6vttkt63xfsbimbj-120.jpg",
-          "price_ungraded": 581.74
+          "image_url": null
         },
         {
           "number": 5,
@@ -2426,62 +2611,70 @@
           "number": 6,
           "name": "Matthew Stafford",
           "team": "Los Angeles Rams",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrau3t6l6jquek4in5-120.jpg",
+          "price_ungraded": 20.0
         },
         {
           "number": 7,
           "name": "Saquon Barkley",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrixntcj4srkotadbk-120.jpg",
+          "price_ungraded": 600.0
         },
         {
           "number": 8,
           "name": "Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/fy7a3xh4vzclw7rh-120.jpg",
+          "price_ungraded": 842.5
         },
         {
           "number": 9,
           "name": "CeeDee Lamb",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7rn55ylaqsdmn3l6-120.jpg",
+          "price_ungraded": 390.0
         },
         {
           "number": 10,
           "name": "De’Von Achane",
           "team": "Miami Dolphins",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrh7ilh3harzbbvvda-120.jpg",
-          "price_ungraded": 329.98
+          "image_url": null
         },
         {
           "number": 11,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 550.0
         },
         {
           "number": 12,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrt4op3cqqjn3sxmxl-120.jpg",
+          "price_ungraded": 650.0
         },
         {
           "number": 13,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 442.5
         },
         {
           "number": 14,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/cnc2ptlzabixhxvf-120.jpg",
+          "price_ungraded": 1174.98
         },
         {
           "number": 15,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrngivo6cezbjhy6sy-120.jpg",
+          "price_ungraded": 435.01
         },
         {
           "number": 16,
@@ -2494,25 +2687,29 @@
           "number": 17,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 17.99
         },
         {
           "number": 18,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrllvqk5rvkmwj6iph-120.jpg",
+          "price_ungraded": 335.75
         },
         {
           "number": 19,
           "name": "Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/g6sa7hdgti2tunxa-120.jpg",
+          "price_ungraded": 625.0
         },
         {
           "number": 20,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/vtk77tqkdzfqsrso-120.jpg",
+          "price_ungraded": 400.87
         },
         {
           "number": 21,
@@ -2532,19 +2729,22 @@
           "number": 23,
           "name": "Sean Taylor",
           "team": "Washington Redskins",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdwcwzrydt3fmndfc-120.jpg",
+          "price_ungraded": 755.13
         },
         {
           "number": 24,
           "name": "Sterling Sharpe",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5c4cxe2je5q3omdk-120.jpg",
+          "price_ungraded": 498.75
         },
         {
           "number": 25,
           "name": "Aaron Rodgers",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdhqzsyqbv2lbqesi-120.jpg",
+          "price_ungraded": 503.25
         },
         {
           "number": 25,
@@ -2562,20 +2762,21 @@
           "number": 2,
           "name": "Brian Thomas Jr.",
           "team": "Jacksonville Jaguars",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzdl5bzf5c3hx3j27-120.jpg",
+          "price_ungraded": 300.0
         },
         {
           "number": 3,
           "name": "Derrick Henry",
           "team": "Baltimore Ravens",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrujauelviqfpm6pyz-120.jpg",
+          "price_ungraded": 360.04
         },
         {
           "number": 4,
           "name": "Calvin Johnson",
           "team": "Detroit Lions",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr6vttkt63xfsbimbj-120.jpg",
-          "price_ungraded": 581.74
+          "image_url": null
         },
         {
           "number": 5,
@@ -2587,62 +2788,70 @@
           "number": 6,
           "name": "Matthew Stafford",
           "team": "Los Angeles Rams",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrau3t6l6jquek4in5-120.jpg",
+          "price_ungraded": 20.0
         },
         {
           "number": 7,
           "name": "Saquon Barkley",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrixntcj4srkotadbk-120.jpg",
+          "price_ungraded": 600.0
         },
         {
           "number": 8,
           "name": "Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/fy7a3xh4vzclw7rh-120.jpg",
+          "price_ungraded": 842.5
         },
         {
           "number": 9,
           "name": "CeeDee Lamb",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7rn55ylaqsdmn3l6-120.jpg",
+          "price_ungraded": 390.0
         },
         {
           "number": 10,
           "name": "De’Von Achane",
           "team": "Miami Dolphins",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrh7ilh3harzbbvvda-120.jpg",
-          "price_ungraded": 329.98
+          "image_url": null
         },
         {
           "number": 11,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 550.0
         },
         {
           "number": 12,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrt4op3cqqjn3sxmxl-120.jpg",
+          "price_ungraded": 650.0
         },
         {
           "number": 13,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 442.5
         },
         {
           "number": 14,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/cnc2ptlzabixhxvf-120.jpg",
+          "price_ungraded": 1174.98
         },
         {
           "number": 15,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrngivo6cezbjhy6sy-120.jpg",
+          "price_ungraded": 435.01
         },
         {
           "number": 16,
@@ -2655,25 +2864,29 @@
           "number": 17,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 17.99
         },
         {
           "number": 18,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrllvqk5rvkmwj6iph-120.jpg",
+          "price_ungraded": 335.75
         },
         {
           "number": 19,
           "name": "Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/g6sa7hdgti2tunxa-120.jpg",
+          "price_ungraded": 625.0
         },
         {
           "number": 20,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/vtk77tqkdzfqsrso-120.jpg",
+          "price_ungraded": 400.87
         },
         {
           "number": 21,
@@ -2693,19 +2906,22 @@
           "number": 23,
           "name": "Sean Taylor",
           "team": "Washington Redskins",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdwcwzrydt3fmndfc-120.jpg",
+          "price_ungraded": 755.13
         },
         {
           "number": 24,
           "name": "Sterling Sharpe",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5c4cxe2je5q3omdk-120.jpg",
+          "price_ungraded": 498.75
         },
         {
           "number": 25,
           "name": "Aaron Rodgers",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdhqzsyqbv2lbqesi-120.jpg",
+          "price_ungraded": 503.25
         }
       ],
       "downtown_duo": [
@@ -2726,7 +2942,7 @@
           "number": 2,
           "name": "Cam Ward/Vince Young",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrquu3ukfjxgaf2ne2-120.jpg"
         },
         {
           "number": 3,
@@ -2739,7 +2955,8 @@
           "number": 4,
           "name": "Jim Harbaugh/Justin Herbert",
           "team": "Los Angeles Chargers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr6jz4ixmqz5fmntfl-120.jpg",
+          "price_ungraded": 750.0
         },
         {
           "number": 5,
@@ -2752,13 +2969,15 @@
           "number": 6,
           "name": "Ben Roethlisberger/Bill Cowher",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrr7sgh2xb6ifhwsuq-120.jpg",
+          "price_ungraded": 669.0
         },
         {
           "number": 7,
           "name": "Drew Brees/Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/qhmiyqg7pugl4lh5-120.jpg",
+          "price_ungraded": 1750.0
         },
         {
           "number": 8,
@@ -2778,14 +2997,15 @@
           "number": 10,
           "name": "Luther Burden III/Rome Odunze",
           "team": "Chicago Bears",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzvgriao4nibltpju-120.jpg",
-          "price_ungraded": 182.48
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrg66qgdayleys4mzn-120.jpg",
+          "price_ungraded": 4.0
         },
         {
           "number": 11,
           "name": "Terry Bradshaw/Will Howard",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr23fi7atiri42comt-120.jpg",
+          "price_ungraded": 647.5
         },
         {
           "number": 12,
@@ -2805,7 +3025,8 @@
           "number": 14,
           "name": "Andy Reid/Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/cacu5qjokmy3zyj2-120.jpg",
+          "price_ungraded": 1125.0
         },
         {
           "number": 15,
@@ -2830,7 +3051,7 @@
           "number": 2,
           "name": "Cam Ward/Vince Young",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrquu3ukfjxgaf2ne2-120.jpg"
         },
         {
           "number": 3,
@@ -2843,7 +3064,8 @@
           "number": 4,
           "name": "Jim Harbaugh/Justin Herbert",
           "team": "Los Angeles Chargers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr6jz4ixmqz5fmntfl-120.jpg",
+          "price_ungraded": 750.0
         },
         {
           "number": 5,
@@ -2856,13 +3078,15 @@
           "number": 6,
           "name": "Ben Roethlisberger/Bill Cowher",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrr7sgh2xb6ifhwsuq-120.jpg",
+          "price_ungraded": 669.0
         },
         {
           "number": 7,
           "name": "Drew Brees/Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/qhmiyqg7pugl4lh5-120.jpg",
+          "price_ungraded": 1750.0
         },
         {
           "number": 8,
@@ -2882,14 +3106,15 @@
           "number": 10,
           "name": "Luther Burden III/Rome Odunze",
           "team": "Chicago Bears",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzvgriao4nibltpju-120.jpg",
-          "price_ungraded": 182.48
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrg66qgdayleys4mzn-120.jpg",
+          "price_ungraded": 4.0
         },
         {
           "number": 11,
           "name": "Terry Bradshaw/Will Howard",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr23fi7atiri42comt-120.jpg",
+          "price_ungraded": 647.5
         },
         {
           "number": 12,
@@ -2909,7 +3134,8 @@
           "number": 14,
           "name": "Andy Reid/Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/cacu5qjokmy3zyj2-120.jpg",
+          "price_ungraded": 1125.0
         },
         {
           "number": 15,
@@ -2929,13 +3155,15 @@
           "number": 1,
           "name": "Charles Woodson",
           "team": "Oakland Raiders",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corryv2pwf2uu6nalcjy-120.jpg",
+          "price_ungraded": 461.0
         },
         {
           "number": 2,
           "name": "Devin Hester",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corramiwhbgmahppa54n-120.jpg",
+          "price_ungraded": 535.0
         },
         {
           "number": 3,
@@ -2947,25 +3175,29 @@
           "number": 4,
           "name": "Richard Sherman",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrocmyjkhdc2v5reln-120.jpg",
+          "price_ungraded": 438.0
         },
         {
           "number": 5,
           "name": "Thurman Thomas",
           "team": "Buffalo Bills",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corryebsf4gdyzotdldb-120.jpg",
+          "price_ungraded": 429.99
         },
         {
           "number": 6,
           "name": "Joe Namath",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrb22mrqpxbtuksp4e-120.jpg",
+          "price_ungraded": 313.25
         },
         {
           "number": 7,
           "name": "Mike Alstott",
           "team": "Tampa Bay Buccaneers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrozvih3ks4xl553eq-120.jpg",
+          "price_ungraded": 415.0
         },
         {
           "number": 8,
@@ -2978,13 +3210,15 @@
           "number": 9,
           "name": "Steve Young",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrs22kbfcrabi47axl-120.jpg",
+          "price_ungraded": 360.0
         },
         {
           "number": 10,
           "name": "Jerome Bettis",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrokbuqvsudl437sxz-120.jpg",
+          "price_ungraded": 415.0
         },
         {
           "number": 10,
@@ -2996,13 +3230,15 @@
           "number": 1,
           "name": "Charles Woodson",
           "team": "Oakland Raiders",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corryv2pwf2uu6nalcjy-120.jpg",
+          "price_ungraded": 461.0
         },
         {
           "number": 2,
           "name": "Devin Hester",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corramiwhbgmahppa54n-120.jpg",
+          "price_ungraded": 535.0
         },
         {
           "number": 3,
@@ -3014,25 +3250,29 @@
           "number": 4,
           "name": "Richard Sherman",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrocmyjkhdc2v5reln-120.jpg",
+          "price_ungraded": 438.0
         },
         {
           "number": 5,
           "name": "Thurman Thomas",
           "team": "Buffalo Bills",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corryebsf4gdyzotdldb-120.jpg",
+          "price_ungraded": 429.99
         },
         {
           "number": 6,
           "name": "Joe Namath",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrb22mrqpxbtuksp4e-120.jpg",
+          "price_ungraded": 313.25
         },
         {
           "number": 7,
           "name": "Mike Alstott",
           "team": "Tampa Bay Buccaneers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrozvih3ks4xl553eq-120.jpg",
+          "price_ungraded": 415.0
         },
         {
           "number": 8,
@@ -3045,13 +3285,15 @@
           "number": 9,
           "name": "Steve Young",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrs22kbfcrabi47axl-120.jpg",
+          "price_ungraded": 360.0
         },
         {
           "number": 10,
           "name": "Jerome Bettis",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrokbuqvsudl437sxz-120.jpg",
+          "price_ungraded": 415.0
         }
       ],
       "rookie_kings": [
@@ -3065,25 +3307,29 @@
           "number": 1,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri5gqitl22zdsnych-120.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 2,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrfvillo67bezxc4vn-120.jpg",
+          "price_ungraded": 7.49
         },
         {
           "number": 3,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 4,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 1.5
         },
         {
           "number": 5,
@@ -3096,31 +3342,36 @@
           "number": 6,
           "name": "Luther Burden III",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzvgriao4nibltpju-120.jpg",
+          "price_ungraded": 182.48
         },
         {
           "number": 7,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrif3l3xm6qhibdost-120.jpg",
+          "price_ungraded": 78.25
         },
         {
           "number": 8,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkoyavbdswvmom76u-120.jpg",
+          "price_ungraded": 635.0
         },
         {
           "number": 9,
           "name": "Cam Skattebo",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corruhpsfbbzajigownk-120.jpg",
+          "price_ungraded": 179.86
         },
         {
           "number": 10,
           "name": "Colston Loveland",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrupoyemaewnt6gzfh-120.jpg",
+          "price_ungraded": 6.43
         },
         {
           "number": 11,
@@ -3145,7 +3396,8 @@
           "number": 14,
           "name": "Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/3kxmlo7txvr6a2mt-120.jpg",
+          "price_ungraded": 1.79
         },
         {
           "number": 15,
@@ -3158,13 +3410,15 @@
           "number": 16,
           "name": "Jalen Milroe",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrv6sjiieioe63rcwk-120.jpg",
+          "price_ungraded": 0.99
         },
         {
           "number": 17,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5d7vuy5vke3tzerh-120.jpg",
+          "price_ungraded": 1.39
         },
         {
           "number": 18,
@@ -3177,13 +3431,15 @@
           "number": 19,
           "name": "Trevor Etienne",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrpqvoagdtwbsoz544-120.jpg",
+          "price_ungraded": 37.43
         },
         {
           "number": 20,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 90.0
         },
         {
           "number": 20,
@@ -3195,25 +3451,29 @@
           "number": 1,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri5gqitl22zdsnych-120.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 2,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrfvillo67bezxc4vn-120.jpg",
+          "price_ungraded": 7.49
         },
         {
           "number": 3,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 4,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 1.5
         },
         {
           "number": 5,
@@ -3226,31 +3486,36 @@
           "number": 6,
           "name": "Luther Burden III",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzvgriao4nibltpju-120.jpg",
+          "price_ungraded": 182.48
         },
         {
           "number": 7,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrif3l3xm6qhibdost-120.jpg",
+          "price_ungraded": 78.25
         },
         {
           "number": 8,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkoyavbdswvmom76u-120.jpg",
+          "price_ungraded": 635.0
         },
         {
           "number": 9,
           "name": "Cam Skattebo",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corruhpsfbbzajigownk-120.jpg",
+          "price_ungraded": 179.86
         },
         {
           "number": 10,
           "name": "Colston Loveland",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrupoyemaewnt6gzfh-120.jpg",
+          "price_ungraded": 6.43
         },
         {
           "number": 11,
@@ -3275,7 +3540,8 @@
           "number": 14,
           "name": "Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/3kxmlo7txvr6a2mt-120.jpg",
+          "price_ungraded": 1.79
         },
         {
           "number": 15,
@@ -3288,13 +3554,15 @@
           "number": 16,
           "name": "Jalen Milroe",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrv6sjiieioe63rcwk-120.jpg",
+          "price_ungraded": 0.99
         },
         {
           "number": 17,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5d7vuy5vke3tzerh-120.jpg",
+          "price_ungraded": 1.39
         },
         {
           "number": 18,
@@ -3307,13 +3575,15 @@
           "number": 19,
           "name": "Trevor Etienne",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrpqvoagdtwbsoz544-120.jpg",
+          "price_ungraded": 37.43
         },
         {
           "number": 20,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 90.0
         }
       ],
       "sunday_kings": [
@@ -3327,25 +3597,29 @@
           "number": 1,
           "name": "Justin Jefferson",
           "team": "Minnesota Vikings",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-sunday-kings-justin-jefferson.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-sunday-kings-justin-jefferson.jpg",
+          "price_ungraded": 120.17
         },
         {
           "number": 2,
           "name": "Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrz5wboxtspyjcmwex-120.jpg",
+          "price_ungraded": 177.5
         },
         {
           "number": 3,
           "name": "Justin Herbert",
           "team": "Los Angeles Chargers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7aw375sdvio4copm-120.jpg",
+          "price_ungraded": 74.0
         },
         {
           "number": 4,
           "name": "Joe Burrow",
           "team": "Cincinnati Bengals",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg",
+          "price_ungraded": 117.54
         },
         {
           "number": 5,
@@ -3364,49 +3638,57 @@
           "number": 7,
           "name": "Josh Allen",
           "team": "Buffalo Bills",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5kikujz7om43hedy-120.jpg",
+          "price_ungraded": 150.0
         },
         {
           "number": 8,
           "name": "Travis Kelce",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrrhnamnwrsn3c3v53-120.jpg",
+          "price_ungraded": 76.0
         },
         {
           "number": 9,
           "name": "T.J. Watt",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrm5wqbgpevdelpsrc-120.jpg",
+          "price_ungraded": 127.97
         },
         {
           "number": 10,
           "name": "CeeDee Lamb",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3ixqrcgjyf3gcbu6-120.jpg",
+          "price_ungraded": 114.25
         },
         {
           "number": 11,
           "name": "Jalen Hurts",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrl36rtymryi2ja2d2-120.jpg",
+          "price_ungraded": 77.15
         },
         {
           "number": 12,
           "name": "Aidan Hutchinson",
           "team": "Detroit Lions",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbxelrwtvrhwkg4fb-120.jpg",
+          "price_ungraded": 116.25
         },
         {
           "number": 13,
           "name": "Jayden Daniels",
           "team": "Washington Commanders",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkafku52rxysrx3k3-120.jpg",
+          "price_ungraded": 123.13
         },
         {
           "number": 14,
           "name": "Tyreek Hill",
           "team": "Miami Dolphins",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrptqmia7yvmyghnt7-120.jpg",
+          "price_ungraded": 52.0
         },
         {
           "number": 15,
@@ -3419,91 +3701,106 @@
           "number": 16,
           "name": "Jonathan Taylor",
           "team": "Indianapolis Colts",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr4zkxc4y6l6xhqtj2-120.jpg",
+          "price_ungraded": 68.04
         },
         {
           "number": 17,
           "name": "Terry McLaurin",
           "team": "Washington Commanders",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrlc4gypluw4rpcq46-120.jpg",
+          "price_ungraded": 94.5
         },
         {
           "number": 18,
           "name": "Derrick Henry",
           "team": "Baltimore Ravens",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr36jcp7oiost44uji-120.jpg",
+          "price_ungraded": 91.3
         },
         {
           "number": 19,
           "name": "Brock Purdy",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrhlhczgeqhs52azil-120.jpg",
+          "price_ungraded": 87.39
         },
         {
           "number": 20,
           "name": "Bo Nix",
           "team": "Denver Broncos",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corro3rmm4wlt5krbip5-120.jpg",
+          "price_ungraded": 143.25
         },
         {
           "number": 21,
           "name": "Brian Urlacher",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrsh2wtviakm6nsd6n-120.jpg",
+          "price_ungraded": 130.0
         },
         {
           "number": 22,
           "name": "James Harrison",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqdtlbzghq5ikzluz-120.jpg",
+          "price_ungraded": 78.0
         },
         {
           "number": 23,
           "name": "Steve Young",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrrk5j5we2z4exgajx-120.jpg",
+          "price_ungraded": 76.28
         },
         {
           "number": 24,
           "name": "Joe Montana",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3y6waweuxva3jji7-120.jpg",
+          "price_ungraded": 97.07
         },
         {
           "number": 25,
           "name": "Joe Namath",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrnzb5qdd7a2pf242q-120.jpg",
+          "price_ungraded": 66.6
         },
         {
           "number": 26,
           "name": "Adrian Peterson",
           "team": "Minnesota Vikings",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corraybznxikwngjmccq-120.jpg",
+          "price_ungraded": 95.5
         },
         {
           "number": 27,
           "name": "Emmitt Smith",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrazyqgyeqgjtenq2k-120.jpg",
+          "price_ungraded": 110.0
         },
         {
           "number": 28,
           "name": "Antonio Gates",
           "team": "San Diego Chargers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3qxthregqadgmy7w-120.jpg",
+          "price_ungraded": 51.68
         },
         {
           "number": 29,
           "name": "Eli Manning",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkrid64ykss5cifks-120.jpg",
+          "price_ungraded": 126.75
         },
         {
           "number": 30,
           "name": "Michael Irvin",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzjpulyfd4hbp4nro-120.jpg",
+          "price_ungraded": 92.49
         },
         {
           "number": 20,
@@ -3515,25 +3812,29 @@
           "number": 1,
           "name": "Justin Jefferson",
           "team": "Minnesota Vikings",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-sunday-kings-justin-jefferson.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-sunday-kings-justin-jefferson.jpg",
+          "price_ungraded": 120.17
         },
         {
           "number": 2,
           "name": "Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrz5wboxtspyjcmwex-120.jpg",
+          "price_ungraded": 177.5
         },
         {
           "number": 3,
           "name": "Justin Herbert",
           "team": "Los Angeles Chargers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7aw375sdvio4copm-120.jpg",
+          "price_ungraded": 74.0
         },
         {
           "number": 4,
           "name": "Joe Burrow",
           "team": "Cincinnati Bengals",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg",
+          "price_ungraded": 117.54
         },
         {
           "number": 5,
@@ -3552,49 +3853,57 @@
           "number": 7,
           "name": "Josh Allen",
           "team": "Buffalo Bills",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5kikujz7om43hedy-120.jpg",
+          "price_ungraded": 150.0
         },
         {
           "number": 8,
           "name": "Travis Kelce",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrrhnamnwrsn3c3v53-120.jpg",
+          "price_ungraded": 76.0
         },
         {
           "number": 9,
           "name": "T.J. Watt",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrm5wqbgpevdelpsrc-120.jpg",
+          "price_ungraded": 127.97
         },
         {
           "number": 10,
           "name": "CeeDee Lamb",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3ixqrcgjyf3gcbu6-120.jpg",
+          "price_ungraded": 114.25
         },
         {
           "number": 11,
           "name": "Jalen Hurts",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrl36rtymryi2ja2d2-120.jpg",
+          "price_ungraded": 77.15
         },
         {
           "number": 12,
           "name": "Aidan Hutchinson",
           "team": "Detroit Lions",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbxelrwtvrhwkg4fb-120.jpg",
+          "price_ungraded": 116.25
         },
         {
           "number": 13,
           "name": "Jayden Daniels",
           "team": "Washington Commanders",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkafku52rxysrx3k3-120.jpg",
+          "price_ungraded": 123.13
         },
         {
           "number": 14,
           "name": "Tyreek Hill",
           "team": "Miami Dolphins",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrptqmia7yvmyghnt7-120.jpg",
+          "price_ungraded": 52.0
         },
         {
           "number": 15,
@@ -3607,91 +3916,106 @@
           "number": 16,
           "name": "Jonathan Taylor",
           "team": "Indianapolis Colts",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr4zkxc4y6l6xhqtj2-120.jpg",
+          "price_ungraded": 68.04
         },
         {
           "number": 17,
           "name": "Terry McLaurin",
           "team": "Washington Commanders",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrlc4gypluw4rpcq46-120.jpg",
+          "price_ungraded": 94.5
         },
         {
           "number": 18,
           "name": "Derrick Henry",
           "team": "Baltimore Ravens",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr36jcp7oiost44uji-120.jpg",
+          "price_ungraded": 91.3
         },
         {
           "number": 19,
           "name": "Brock Purdy",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrhlhczgeqhs52azil-120.jpg",
+          "price_ungraded": 87.39
         },
         {
           "number": 20,
           "name": "Bo Nix",
           "team": "Denver Broncos",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corro3rmm4wlt5krbip5-120.jpg",
+          "price_ungraded": 143.25
         },
         {
           "number": 21,
           "name": "Brian Urlacher",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrsh2wtviakm6nsd6n-120.jpg",
+          "price_ungraded": 130.0
         },
         {
           "number": 22,
           "name": "James Harrison",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqdtlbzghq5ikzluz-120.jpg",
+          "price_ungraded": 78.0
         },
         {
           "number": 23,
           "name": "Steve Young",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrrk5j5we2z4exgajx-120.jpg",
+          "price_ungraded": 76.28
         },
         {
           "number": 24,
           "name": "Joe Montana",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3y6waweuxva3jji7-120.jpg",
+          "price_ungraded": 97.07
         },
         {
           "number": 25,
           "name": "Joe Namath",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrnzb5qdd7a2pf242q-120.jpg",
+          "price_ungraded": 66.6
         },
         {
           "number": 26,
           "name": "Adrian Peterson",
           "team": "Minnesota Vikings",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corraybznxikwngjmccq-120.jpg",
+          "price_ungraded": 95.5
         },
         {
           "number": 27,
           "name": "Emmitt Smith",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrazyqgyeqgjtenq2k-120.jpg",
+          "price_ungraded": 110.0
         },
         {
           "number": 28,
           "name": "Antonio Gates",
           "team": "San Diego Chargers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3qxthregqadgmy7w-120.jpg",
+          "price_ungraded": 51.68
         },
         {
           "number": 29,
           "name": "Eli Manning",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkrid64ykss5cifks-120.jpg",
+          "price_ungraded": 126.75
         },
         {
           "number": 30,
           "name": "Michael Irvin",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzjpulyfd4hbp4nro-120.jpg",
+          "price_ungraded": 92.49
         }
       ],
       "uptowns": [
@@ -3705,73 +4029,85 @@
           "number": 1,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2zezmp4mhdwcrfud-120.jpg",
+          "price_ungraded": 152.5
         },
         {
           "number": 2,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 231.98
         },
         {
           "number": 3,
           "name": "Brian Urlacher",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3r4fvfqh2bozxjy2-120.jpg",
+          "price_ungraded": 181.38
         },
         {
           "number": 4,
           "name": "Brock Purdy",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3hjqzxseiksqv2km-120.jpg",
+          "price_ungraded": 225.0
         },
         {
           "number": 5,
           "name": "Cam Skattebo",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrd5gizu5lznwzycn6-120.jpg",
+          "price_ungraded": 277.25
         },
         {
           "number": 6,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrmkq7whf3omn5gy4x-120.jpg",
+          "price_ungraded": 298.32
         },
         {
           "number": 7,
           "name": "Deion Sanders",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrw5ntab3ke2lgt4ni-120.jpg",
+          "price_ungraded": 193.75
         },
         {
           "number": 8,
           "name": "Puka Nacua",
           "team": "Los Angeles Rams",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrskp4dbk4xvcy4ehu-120.jpg",
+          "price_ungraded": 226.83
         },
         {
           "number": 9,
           "name": "Jalen Hurts",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzwjkwf44rnekuncn-120.jpg",
+          "price_ungraded": 212.14
         },
         {
           "number": 10,
           "name": "Jalen Milroe",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7ciy4cl6dkl47lm2-120.jpg",
+          "price_ungraded": 152.0
         },
         {
           "number": 11,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrx6fjje4lzzdpqht2-120.jpg",
+          "price_ungraded": 514.69
         },
         {
           "number": 12,
           "name": "Joe Burrow",
           "team": "Cincinnati Bengals",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg",
+          "price_ungraded": 270.0
         },
         {
           "number": 13,
@@ -3783,13 +4119,15 @@
           "number": 14,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdmtpktienxcbzuvo-120.jpg",
+          "price_ungraded": 173.89
         },
         {
           "number": 15,
           "name": "Mike Evans",
           "team": "Tampa Bay Buccaneers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corroqs7qqkgd7ggeotd-120.jpg",
+          "price_ungraded": 210.89
         },
         {
           "number": 16,
@@ -3808,43 +4146,50 @@
           "number": 18,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 240.02
         },
         {
           "number": 19,
           "name": "Terrell Davis",
           "team": "Denver Broncos",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrsgndy2eoqmqqk5xe-120.jpg",
+          "price_ungraded": 170.75
         },
         {
           "number": 20,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbpglqwea7fw6ea5i-120.jpg",
+          "price_ungraded": 220.0
         },
         {
           "number": 21,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 220.59
         },
         {
           "number": 22,
           "name": "Travis Kelce",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqdczlutmlm4goltq-120.jpg",
+          "price_ungraded": 203.13
         },
         {
           "number": 23,
           "name": "TreVeyon Henderson",
           "team": "New England Patriots",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrayzg66wveev2ufsc-120.jpg",
+          "price_ungraded": 181.03
         },
         {
           "number": 24,
           "name": "Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr35zdsvmddgcquka4-120.jpg",
+          "price_ungraded": 258.11
         },
         {
           "number": 25,
@@ -3862,73 +4207,85 @@
           "number": 1,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2zezmp4mhdwcrfud-120.jpg",
+          "price_ungraded": 152.5
         },
         {
           "number": 2,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 231.98
         },
         {
           "number": 3,
           "name": "Brian Urlacher",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3r4fvfqh2bozxjy2-120.jpg",
+          "price_ungraded": 181.38
         },
         {
           "number": 4,
           "name": "Brock Purdy",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3hjqzxseiksqv2km-120.jpg",
+          "price_ungraded": 225.0
         },
         {
           "number": 5,
           "name": "Cam Skattebo",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrd5gizu5lznwzycn6-120.jpg",
+          "price_ungraded": 277.25
         },
         {
           "number": 6,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrmkq7whf3omn5gy4x-120.jpg",
+          "price_ungraded": 298.32
         },
         {
           "number": 7,
           "name": "Deion Sanders",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrw5ntab3ke2lgt4ni-120.jpg",
+          "price_ungraded": 193.75
         },
         {
           "number": 8,
           "name": "Puka Nacua",
           "team": "Los Angeles Rams",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrskp4dbk4xvcy4ehu-120.jpg",
+          "price_ungraded": 226.83
         },
         {
           "number": 9,
           "name": "Jalen Hurts",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzwjkwf44rnekuncn-120.jpg",
+          "price_ungraded": 212.14
         },
         {
           "number": 10,
           "name": "Jalen Milroe",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7ciy4cl6dkl47lm2-120.jpg",
+          "price_ungraded": 152.0
         },
         {
           "number": 11,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrx6fjje4lzzdpqht2-120.jpg",
+          "price_ungraded": 514.69
         },
         {
           "number": 12,
           "name": "Joe Burrow",
           "team": "Cincinnati Bengals",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-black-pandora-joe-burrow.jpg",
+          "price_ungraded": 270.0
         },
         {
           "number": 13,
@@ -3940,13 +4297,15 @@
           "number": 14,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrdmtpktienxcbzuvo-120.jpg",
+          "price_ungraded": 173.89
         },
         {
           "number": 15,
           "name": "Mike Evans",
           "team": "Tampa Bay Buccaneers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corroqs7qqkgd7ggeotd-120.jpg",
+          "price_ungraded": 210.89
         },
         {
           "number": 16,
@@ -3965,43 +4324,50 @@
           "number": 18,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 240.02
         },
         {
           "number": 19,
           "name": "Terrell Davis",
           "team": "Denver Broncos",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrsgndy2eoqmqqk5xe-120.jpg",
+          "price_ungraded": 170.75
         },
         {
           "number": 20,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbpglqwea7fw6ea5i-120.jpg",
+          "price_ungraded": 220.0
         },
         {
           "number": 21,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 220.59
         },
         {
           "number": 22,
           "name": "Travis Kelce",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqdczlutmlm4goltq-120.jpg",
+          "price_ungraded": 203.13
         },
         {
           "number": 23,
           "name": "TreVeyon Henderson",
           "team": "New England Patriots",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrayzg66wveev2ufsc-120.jpg",
+          "price_ungraded": 181.03
         },
         {
           "number": 24,
           "name": "Tyler Shough",
           "team": "New Orleans Saints",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr35zdsvmddgcquka4-120.jpg",
+          "price_ungraded": 258.11
         },
         {
           "number": 25,
@@ -4021,61 +4387,71 @@
           "number": 1,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri5gqitl22zdsnych-120.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 2,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrfvillo67bezxc4vn-120.jpg",
+          "price_ungraded": 7.49
         },
         {
           "number": 3,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 4,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 1.5
         },
         {
           "number": 5,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 2.47
         },
         {
           "number": 6,
           "name": "Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrjm4sckbhvttb7nhc-120.jpg",
+          "price_ungraded": 2.5
         },
         {
           "number": 7,
           "name": "Saquon Barkley",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrixntcj4srkotadbk-120.jpg",
+          "price_ungraded": 600.0
         },
         {
           "number": 8,
           "name": "DK Metcalf",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/n5gbxa26rmggtofo-120.jpg",
+          "price_ungraded": 1.93
         },
         {
           "number": 9,
           "name": "Derrick Henry",
           "team": "Baltimore Ravens",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr73kvvjfegvzi2zvb-120.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 10,
           "name": "Ahmad “Sauce” Gardner",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3r7j6uvbl7ptvtus-120.jpg",
+          "price_ungraded": 1.57
         },
         {
           "number": 10,
@@ -4087,61 +4463,71 @@
           "number": 1,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri5gqitl22zdsnych-120.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 2,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrfvillo67bezxc4vn-120.jpg",
+          "price_ungraded": 7.49
         },
         {
           "number": 3,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 4,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 1.5
         },
         {
           "number": 5,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 2.47
         },
         {
           "number": 6,
           "name": "Patrick Mahomes II",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrjm4sckbhvttb7nhc-120.jpg",
+          "price_ungraded": 2.5
         },
         {
           "number": 7,
           "name": "Saquon Barkley",
           "team": "Philadelphia Eagles",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrixntcj4srkotadbk-120.jpg",
+          "price_ungraded": 600.0
         },
         {
           "number": 8,
           "name": "DK Metcalf",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/n5gbxa26rmggtofo-120.jpg",
+          "price_ungraded": 1.93
         },
         {
           "number": 9,
           "name": "Derrick Henry",
           "team": "Baltimore Ravens",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr73kvvjfegvzi2zvb-120.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 10,
           "name": "Ahmad “Sauce” Gardner",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3r7j6uvbl7ptvtus-120.jpg",
+          "price_ungraded": 1.57
         }
       ],
       "retro_2015": [
@@ -4155,31 +4541,36 @@
           "number": 1,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri5gqitl22zdsnych-120.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 2,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrfvillo67bezxc4vn-120.jpg",
+          "price_ungraded": 7.49
         },
         {
           "number": 3,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 1.94
         },
         {
           "number": 4,
           "name": "Cam Skattebo",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrsljuxl2hzparjgm5-120.jpg",
+          "price_ungraded": 3.34
         },
         {
           "number": 5,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 88.0
         },
         {
           "number": 6,
@@ -4192,31 +4583,36 @@
           "number": 7,
           "name": "Colston Loveland",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrka4ahrco2ooemb4i-120.jpg",
+          "price_ungraded": 1.75
         },
         {
           "number": 8,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 9,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/uieqyxxlkmzexxyl-120.jpg",
+          "price_ungraded": 950.0
         },
         {
           "number": 10,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqijstwqhlhkbd6sx-120.jpg",
+          "price_ungraded": 54.0
         },
         {
           "number": 11,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corryi47wuqaeq3pkmhd-120.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 12,
@@ -4228,19 +4624,22 @@
           "number": 13,
           "name": "Jayden Higgins",
           "team": "Houston Texans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5dvczihpyxcuv4ql-120.jpg",
+          "price_ungraded": 23.03
         },
         {
           "number": 14,
           "name": "Jalen Milroe",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzjf2svcdoxe27fyl-120.jpg",
+          "price_ungraded": 1.06
         },
         {
           "number": 15,
           "name": "RJ Harvey",
           "team": "Denver Broncos",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcrk5ef7a4ugjdlx6-120.jpg",
+          "price_ungraded": 1.43
         },
         {
           "number": 16,
@@ -4253,55 +4652,64 @@
           "number": 17,
           "name": "Luther Burden III",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrw5bb4i3uqnvlcaje-120.jpg",
+          "price_ungraded": 2.0
         },
         {
           "number": 18,
           "name": "Stefon Diggs",
           "team": "Minnesota Vikings",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3rmnjjoedqw3xjnv-120.jpg",
+          "price_ungraded": 1.49
         },
         {
           "number": 19,
           "name": "Jameis Winston",
           "team": "Tampa Bay Buccaneers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkqf2ux7ir3u4e6x4-120.jpg",
+          "price_ungraded": 16.99
         },
         {
           "number": 20,
           "name": "Leonard Williams",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrtxxiwqpdy4nb2yrv-120.jpg",
+          "price_ungraded": 1.72
         },
         {
           "number": 21,
           "name": "Marcus Mariota",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrunti3e732ri3h4wk-120.jpg",
+          "price_ungraded": 19.98
         },
         {
           "number": 22,
           "name": "Marcus Peters",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcrszkicm5d726yio-120.jpg",
+          "price_ungraded": 1.49
         },
         {
           "number": 23,
           "name": "Arik Armstead",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcaxxrzysnnvxldjy-120.jpg",
+          "price_ungraded": 3.5
         },
         {
           "number": 24,
           "name": "Shaq Thompson",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7py7zbm7feawfbth-120.jpg",
+          "price_ungraded": 3.25
         },
         {
           "number": 25,
           "name": "Randy Gregory",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrvtu7inghmfyiu4hk-120.jpg",
+          "price_ungraded": 1.89
         },
         {
           "number": 26,
@@ -4313,25 +4721,29 @@
           "number": 27,
           "name": "Danielle Hunter",
           "team": "Minnesota Vikings",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrxhaz2bgfdq6tmjde-120.jpg",
+          "price_ungraded": 0.99
         },
         {
           "number": 28,
           "name": "Dante Fowler Jr.",
           "team": "Jacksonville Jaguars",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqzx6zdfx44v2tkcv-120.jpg",
+          "price_ungraded": 2.49
         },
         {
           "number": 29,
           "name": "Bud Dupree",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr67jkei5wuyf4e2rp-120.jpg",
+          "price_ungraded": 9.5
         },
         {
           "number": 30,
           "name": "Mark Glowinski",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbn3pm35ehnhb55kz-120.jpg",
+          "price_ungraded": 1.72
         },
         {
           "number": 30,
@@ -4343,31 +4755,36 @@
           "number": 1,
           "name": "Cam Ward",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corri5gqitl22zdsnych-120.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 2,
           "name": "Jaxson Dart",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrfvillo67bezxc4vn-120.jpg",
+          "price_ungraded": 7.49
         },
         {
           "number": 3,
           "name": "Shedeur Sanders",
           "team": "Cleveland Browns",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-patch-auto-shedeur-sanders.jpg",
+          "price_ungraded": 1.94
         },
         {
           "number": 4,
           "name": "Cam Skattebo",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrsljuxl2hzparjgm5-120.jpg",
+          "price_ungraded": 3.34
         },
         {
           "number": 5,
           "name": "Travis Hunter",
           "team": "Jacksonville Jaguars",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-downtown-travis-hunter.jpg",
+          "price_ungraded": 88.0
         },
         {
           "number": 6,
@@ -4380,31 +4797,36 @@
           "number": 7,
           "name": "Colston Loveland",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrka4ahrco2ooemb4i-120.jpg",
+          "price_ungraded": 1.75
         },
         {
           "number": 8,
           "name": "Ashton Jeanty",
           "team": "Las Vegas Raiders",
-          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg"
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/2025-donruss-optic-rookie-kings-ashton-jeanty.jpg",
+          "price_ungraded": 1.99
         },
         {
           "number": 9,
           "name": "Abdul Carter",
           "team": "New York Giants",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/uieqyxxlkmzexxyl-120.jpg",
+          "price_ungraded": 950.0
         },
         {
           "number": 10,
           "name": "Matthew Golden",
           "team": "Green Bay Packers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqijstwqhlhkbd6sx-120.jpg",
+          "price_ungraded": 54.0
         },
         {
           "number": 11,
           "name": "Tetairoa McMillan",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corryi47wuqaeq3pkmhd-120.jpg",
+          "price_ungraded": 2.25
         },
         {
           "number": 12,
@@ -4416,19 +4838,22 @@
           "number": 13,
           "name": "Jayden Higgins",
           "team": "Houston Texans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr5dvczihpyxcuv4ql-120.jpg",
+          "price_ungraded": 23.03
         },
         {
           "number": 14,
           "name": "Jalen Milroe",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrzjf2svcdoxe27fyl-120.jpg",
+          "price_ungraded": 1.06
         },
         {
           "number": 15,
           "name": "RJ Harvey",
           "team": "Denver Broncos",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcrk5ef7a4ugjdlx6-120.jpg",
+          "price_ungraded": 1.43
         },
         {
           "number": 16,
@@ -4441,55 +4866,64 @@
           "number": 17,
           "name": "Luther Burden III",
           "team": "Chicago Bears",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrw5bb4i3uqnvlcaje-120.jpg",
+          "price_ungraded": 2.0
         },
         {
           "number": 18,
           "name": "Stefon Diggs",
           "team": "Minnesota Vikings",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr3rmnjjoedqw3xjnv-120.jpg",
+          "price_ungraded": 1.49
         },
         {
           "number": 19,
           "name": "Jameis Winston",
           "team": "Tampa Bay Buccaneers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrkqf2ux7ir3u4e6x4-120.jpg",
+          "price_ungraded": 16.99
         },
         {
           "number": 20,
           "name": "Leonard Williams",
           "team": "New York Jets",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrtxxiwqpdy4nb2yrv-120.jpg",
+          "price_ungraded": 1.72
         },
         {
           "number": 21,
           "name": "Marcus Mariota",
           "team": "Tennessee Titans",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrunti3e732ri3h4wk-120.jpg",
+          "price_ungraded": 19.98
         },
         {
           "number": 22,
           "name": "Marcus Peters",
           "team": "Kansas City Chiefs",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcrszkicm5d726yio-120.jpg",
+          "price_ungraded": 1.49
         },
         {
           "number": 23,
           "name": "Arik Armstead",
           "team": "San Francisco 49ers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrcaxxrzysnnvxldjy-120.jpg",
+          "price_ungraded": 3.5
         },
         {
           "number": 24,
           "name": "Shaq Thompson",
           "team": "Carolina Panthers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr7py7zbm7feawfbth-120.jpg",
+          "price_ungraded": 3.25
         },
         {
           "number": 25,
           "name": "Randy Gregory",
           "team": "Dallas Cowboys",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrvtu7inghmfyiu4hk-120.jpg",
+          "price_ungraded": 1.89
         },
         {
           "number": 26,
@@ -4501,25 +4935,29 @@
           "number": 27,
           "name": "Danielle Hunter",
           "team": "Minnesota Vikings",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrxhaz2bgfdq6tmjde-120.jpg",
+          "price_ungraded": 0.99
         },
         {
           "number": 28,
           "name": "Dante Fowler Jr.",
           "team": "Jacksonville Jaguars",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrqzx6zdfx44v2tkcv-120.jpg",
+          "price_ungraded": 2.49
         },
         {
           "number": 29,
           "name": "Bud Dupree",
           "team": "Pittsburgh Steelers",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corr67jkei5wuyf4e2rp-120.jpg",
+          "price_ungraded": 9.5
         },
         {
           "number": 30,
           "name": "Mark Glowinski",
           "team": "Seattle Seahawks",
-          "image_url": null
+          "image_url": "/pack-ripper/images/2025-donruss-optic-football/corrbn3pm35ehnhb55kz-120.jpg",
+          "price_ungraded": 1.72
         }
       ]
     },
