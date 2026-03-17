@@ -253,9 +253,17 @@ function buildGenericPackBox(setData, boxConfig, caseState) {
     // Fill guaranteed slots for this pack first
     while (slotIdx < slots.length && cards.length < packCapacity) {
       const s = slots[slotIdx++];
-      if (s === 'auto' || s === 'insert') {
-        const insert = resolveInsertSlot(setData, s === 'auto' ? 1.0 : caseState.hitChance);
+      if (s === 'auto') {
+        // Autos are guaranteed hits -- always pull from the hit pool.
+        // They do NOT affect the pity system because there is no uncertainty:
+        // every box of this type contains an auto by definition.
+        const insert = resolveInsertSlot(setData, 1.0);
+        if (insert) cards.push(insert);
+      } else if (s === 'insert') {
+        const insert = resolveInsertSlot(setData, caseState.hitChance);
         if (insert) {
+          // Only pity-gated inserts (not guaranteed autos) should drive the
+          // hit chance reset in the case state machine.
           if (insert.is_hit) hitFiredThisBox = true;
           cards.push(insert);
         }
