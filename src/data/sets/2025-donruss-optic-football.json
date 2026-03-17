@@ -17,7 +17,7 @@
   },
   "box_types": {
     "hobby": {
-      "label": "Hobby Box:",
+      "label": "Hobby Box",
       "tier": "pack",
       "guarantees": {
         "Autographs": 1,
@@ -66,7 +66,7 @@
       ]
     },
     "fotl": {
-      "label": "1St Off The Line Box:",
+      "label": "1st Off The Line Box",
       "tier": "pack",
       "guarantees": {
         "FOTL-Exclusive Autographs": 1,
@@ -111,7 +111,7 @@
       ]
     },
     "hobby_blaster": {
-      "label": "Hobby Blaster Box:",
+      "label": "Hobby Blaster Box",
       "tier": "pack",
       "guarantees": {
         "Blue Scope Rated Rookies": 3,
@@ -149,7 +149,7 @@
       "boxes_per_case": 20
     },
     "blaster": {
-      "label": "Blaster Box:",
+      "label": "Blaster Box",
       "tier": "flat",
       "guarantees": {
         "Purple Shock or Pink Rated Rookies": 3
@@ -160,7 +160,7 @@
       "pack_slots": []
     },
     "hobby_mega": {
-      "label": "Hobby Mega Box:",
+      "label": "Hobby Mega Box",
       "tier": "flat",
       "guarantees": {
         "Autographs or Memorabilia Cards": 1,
@@ -170,7 +170,7 @@
       "pack_slots": []
     },
     "mega": {
-      "label": "Mega Box:",
+      "label": "Mega Box",
       "tier": "flat",
       "guarantees": {
         "Autographs or Memorabilia Cards": 1,
@@ -183,7 +183,7 @@
       "pack_slots": []
     },
     "h2": {
-      "label": "H2 Box:",
+      "label": "H2 Box",
       "tier": "pack",
       "guarantees": {
         "Red Mojo or Blue Mojo Parallels": 5,
@@ -212,7 +212,7 @@
       ]
     },
     "choice": {
-      "label": "Choice Box:",
+      "label": "Choice Box",
       "tier": "flat",
       "guarantees": {
         "Black Gold Autographs": 1,

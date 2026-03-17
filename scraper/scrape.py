@@ -170,12 +170,17 @@ def extract_box_configs(soup: BeautifulSoup) -> dict:
 
         # Derive pack config from the at-a-glance table when available
         boxes[box_key] = {
-            "label": heading.get_text()
-            .lower()
-            .replace("what to expect in a ", "")
-            .replace("what to expect in an ", "")
-            .strip()
-            .title(),
+            "label": re.sub(
+                r"\b(\d+)([A-Z])",
+                lambda m: m.group(1) + m.group(2).lower(),
+                heading.get_text()
+                .lower()
+                .replace("what to expect in a ", "")
+                .replace("what to expect in an ", "")
+                .strip()
+                .title()
+                .rstrip(":"),
+            ),
             "tier": "pack" if box_key in PACK_BASED else "flat",
             "guarantees": guarantees,
         }
