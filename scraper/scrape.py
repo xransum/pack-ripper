@@ -784,6 +784,12 @@ SCP_BACKOFF_BASE = 1.0  # seconds; multiplied by 2^attempt
 SCP_BACKOFF_JITTER = 1.0  # random(0, this) added on top
 SCP_MAX_RETRIES = 3
 
+# Retry config for empty results (200 OK but zero rows parsed).
+# SCP sometimes returns an empty table on first hit due to transient caching.
+SCP_EMPTY_RETRIES = 2  # max additional attempts after an empty response
+SCP_EMPTY_RETRY_BASE = 2.0  # seconds; multiplied by 2^attempt
+SCP_EMPTY_RETRY_JITTER = 1.0  # random(0, this) added on top
+
 # Parallel qualifier words that indicate a non-base parallel variant.
 _PARALLEL_KEYWORDS = re.compile(
     r"\b(holo|prizm|gold|silver|red|blue|green|purple|orange|pink|black|white|"
@@ -932,9 +938,16 @@ async def _async_fetch_scp_player(
     Fetch and parse SCP search results for one player.
 
     Returns (player_name, rows).
-    Retries up to SCP_MAX_RETRIES times on HTTP 429/503 with exponential
-    backoff + jitter. Applies a per-request inter-arrival jitter delay
-    after acquiring the semaphore.
+
+    Two independent retry layers:
+      - Throttle retries (HTTP 429/503 or timeout): up to SCP_MAX_RETRIES,
+        exponential backoff SCP_BACKOFF_BASE * 2^attempt + jitter.
+      - Empty-result retries (200 OK but zero rows): up to SCP_EMPTY_RETRIES,
+        backoff SCP_EMPTY_RETRY_BASE * 2^attempt + jitter. Each empty retry
+        re-enters the throttle-retry loop from scratch.
+
+    A per-request inter-arrival jitter delay is applied once on entry
+    (before the first throttle attempt) to spread concurrent workers.
     """
     query = _scp_query(player_name, set_year, set_brand)
     url = SCP_SEARCH_URL.format(query=urllib.parse.quote(query))
@@ -943,36 +956,49 @@ async def _async_fetch_scp_player(
         # Inter-arrival jitter so concurrent workers don't all fire together
         await asyncio.sleep(random.uniform(SCP_JITTER_MIN, SCP_JITTER_MAX))
 
-        for attempt in range(SCP_MAX_RETRIES + 1):
-            try:
-                async with session.get(
-                    url, timeout=aiohttp.ClientTimeout(total=30)
-                ) as resp:
-                    if resp.status in (429, 503):
-                        if attempt < SCP_MAX_RETRIES:
-                            wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
-                                0, SCP_BACKOFF_JITTER
-                            )
-                            await asyncio.sleep(wait)
-                            continue
-                        # Exhausted retries
+        for empty_attempt in range(SCP_EMPTY_RETRIES + 1):
+            # Throttle/error retry loop
+            rows: list[dict] = []
+            for attempt in range(SCP_MAX_RETRIES + 1):
+                try:
+                    async with session.get(
+                        url, timeout=aiohttp.ClientTimeout(total=30)
+                    ) as resp:
+                        if resp.status in (429, 503):
+                            if attempt < SCP_MAX_RETRIES:
+                                wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
+                                    0, SCP_BACKOFF_JITTER
+                                )
+                                await asyncio.sleep(wait)
+                                continue
+                            return player_name, []
+                        if resp.status != 200:
+                            return player_name, []
+                        html = await resp.text()
+                        rows = _parse_scp_html(html)
+                        break  # successful fetch; rows may still be empty
+                except asyncio.TimeoutError:
+                    if attempt < SCP_MAX_RETRIES:
+                        wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
+                            0, SCP_BACKOFF_JITTER
+                        )
+                        await asyncio.sleep(wait)
+                    else:
                         return player_name, []
-                    if resp.status != 200:
-                        return player_name, []
-                    html = await resp.text()
-                    return player_name, _parse_scp_html(html)
-            except asyncio.TimeoutError:
-                if attempt < SCP_MAX_RETRIES:
-                    wait = SCP_BACKOFF_BASE * (2**attempt) + random.uniform(
-                        0, SCP_BACKOFF_JITTER
-                    )
-                    await asyncio.sleep(wait)
-                else:
+                except aiohttp.ClientError:
                     return player_name, []
-            except aiohttp.ClientError:
-                return player_name, []
 
-    return player_name, []  # unreachable but satisfies type checker
+            if rows:
+                return player_name, rows
+
+            # Got a clean 200 but zero rows -- wait and retry if budget remains
+            if empty_attempt < SCP_EMPTY_RETRIES:
+                wait = SCP_EMPTY_RETRY_BASE * (2**empty_attempt) + random.uniform(
+                    0, SCP_EMPTY_RETRY_JITTER
+                )
+                await asyncio.sleep(wait)
+
+        return player_name, []
 
 
 async def _async_scrape_all_players(
