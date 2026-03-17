@@ -295,21 +295,39 @@ def build_pack_slots(box_key: str, guarantees: dict) -> list:
 # ---------------------------------------------------------------------------
 
 
-def extract_images(soup: BeautifulSoup) -> dict[str, str]:
+def _name_to_slug(name: str) -> str:
     """
-    Build a map of player name -> first matching Beckett CDN image URL.
-    Images in the article body typically follow a heading for the card they show.
+    Convert a player name to the slug form used in Beckett CDN filenames.
+
+    "Joe Burrow"          -> "joe-burrow"
+    "Jaxon Smith-Njigba"  -> "jaxon-smith-njigba"
+    "Tetairora McMillan"  -> "tetairora-mcmillan"
     """
-    img_map = {}
+    name = name.lower()
+    # Replace any non-alphanumeric chars (spaces, hyphens, apostrophes, etc.)
+    # with a single hyphen, then strip leading/trailing hyphens
+    name = re.sub(r"[^a-z0-9]+", "-", name).strip("-")
+    return name
+
+
+def extract_images(soup: BeautifulSoup) -> list[str]:
+    """
+    Collect all Beckett CDN image URLs from the article body.
+    Returns a plain list of full URL strings (no alt-text matching needed --
+    matching happens later in _apply_image via filename slug).
+    """
+    urls = []
+    seen = set()
     for img in soup.find_all("img"):
         src = img.get("src", "")
         if "img.beckett.com" not in src and "beckett-www.s3" not in src:
             continue
-        # Try alt text first, then figure caption, then nearby heading text
-        alt = img.get("alt", "").strip()
-        if alt:
-            img_map[alt.lower()] = src
-    return img_map
+        # Only keep card-like images (portrait ratio, news-content path).
+        # Exclude avatars, icons, and feature banners.
+        if src not in seen:
+            seen.add(src)
+            urls.append(src)
+    return urls
 
 
 def parse_print_run(text: str) -> int | None:
@@ -413,7 +431,7 @@ JUNK_INSERT_PATTERNS = {
 }
 
 
-def extract_inserts(soup: BeautifulSoup) -> dict:
+def extract_inserts(soup: BeautifulSoup, img_urls: list) -> dict:
     """
     Find all insert sections (h2/h3 headings that match known insert names)
     and extract their card lists.
@@ -446,6 +464,8 @@ def extract_inserts(soup: BeautifulSoup) -> dict:
         combined = "\n".join(content_parts)
         cards = extract_card_section_from_text(combined)
         if cards:
+            for c in cards:
+                _apply_image(c, img_urls)
             inserts[matched_key].extend(cards)
 
     return inserts
@@ -500,16 +520,17 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
         bc["pack_slots"] = build_pack_slots(key, bc.get("guarantees", {}))
 
     print("  Extracting images...")
-    img_map = extract_images(soup)
+    img_urls = extract_images(soup)
+    print(f"    {len(img_urls)} Beckett CDN image(s) found on page")
 
     print("  Extracting base cards...")
-    base_cards = _extract_base_set(soup, img_map)
+    base_cards = _extract_base_set(soup, img_urls)
     print(
         f"    {len(base_cards['veterans'])} veterans, {len(base_cards['rated_rookies'])} rated rookies"
     )
 
     print("  Extracting inserts...")
-    inserts = extract_inserts(soup)
+    inserts = extract_inserts(soup, img_urls)
     hit_count = sum(len(v) for k, v in inserts.items() if k in HIT_INSERT_PATTERNS)
     print(
         f"    {hit_count} hit insert cards across {len(HIT_INSERT_PATTERNS)} categories"
@@ -537,7 +558,7 @@ def parse_beckett_page(soup: BeautifulSoup, meta: dict) -> dict:
     }
 
 
-def _extract_base_set(soup: BeautifulSoup, img_map: dict) -> dict:
+def _extract_base_set(soup: BeautifulSoup, img_urls: list) -> dict:
     veterans = []
     rated_rookies = []
 
@@ -561,7 +582,7 @@ def _extract_base_set(soup: BeautifulSoup, img_map: dict) -> dict:
         cards = extract_card_section_from_text(text)
         for c in cards:
             c["is_rookie"] = False
-            _apply_image(c, img_map)
+            _apply_image(c, img_urls)
             if 1 <= c["number"] <= 200:
                 veterans.append(c)
             # Numbers 201-300 are rated rookies but will be caught by the
@@ -596,23 +617,38 @@ def _extract_base_set(soup: BeautifulSoup, img_map: dict) -> dict:
             if cards:
                 for c in cards:
                     c["is_rookie"] = True
-                    _apply_image(c, img_map)
+                    _apply_image(c, img_urls)
                 rated_rookies = cards
                 break
 
     return {"veterans": veterans, "rated_rookies": rated_rookies}
 
 
-def _apply_image(card: dict, img_map: dict):
-    name_lower = card["name"].lower()
-    # Try exact name match first
-    if name_lower in img_map:
-        card["image_url"] = img_map[name_lower]
+def _apply_image(card: dict, img_urls: list):
+    """
+    Match a card to a CDN image URL by checking whether the image filename
+    slug ends with the slugified player name.
+
+    Beckett filenames follow the pattern:
+        <set-slug>-[<category-slug>-]<player-name-slug>.jpg
+
+    So we slugify the card name and look for a URL whose base filename
+    ends with that slug (preceded by a '-' boundary or start of string).
+    """
+    if not img_urls:
         return
-    # Try partial match (first word of name)
-    first_word = name_lower.split()[0] if name_lower else ""
-    for key, url in img_map.items():
-        if first_word and first_word in key:
+    name_slug = _name_to_slug(card["name"])
+    if not name_slug:
+        return
+    for url in img_urls:
+        # Extract base filename without extension
+        path = url.split("?")[0].rstrip("/")
+        basename = path.split("/")[-1]
+        file_slug, _ = os.path.splitext(basename)
+        file_slug = file_slug.lower()
+        # Match if the filename ends with the player slug or has it as a
+        # hyphen-delimited suffix (e.g. "...-joe-burrow")
+        if file_slug == name_slug or file_slug.endswith("-" + name_slug):
             card["image_url"] = url
             return
 
