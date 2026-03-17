@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { BOXES_PER_CASE } from '@simulator/pity.js';
 
 /**
  * CaseTracker -- progress bar showing boxes opened in the current case,
  * running hit count, current pity percentage, and a reset button.
  *
  * Props:
- *   caseState   - { boxesOpened, hitsInCase, hitChance }
- *   onReset     - () => void
+ *   caseState    - { boxesOpened, hitsInCase, hitChance }
+ *   boxesPerCase - total boxes in one case for this box type
+ *   onReset      - () => void
  */
-export default function CaseTracker({ caseState, onReset }) {
+export default function CaseTracker({ caseState, boxesPerCase, onReset }) {
   const [confirming, setConfirming] = useState(false);
 
   const { boxesOpened, hitsInCase, hitChance } = caseState;
   const pct = Math.round(hitChance * 100);
-  const progress = Math.min(boxesOpened / BOXES_PER_CASE, 1);
+  const progress = Math.min(boxesOpened / boxesPerCase, 1);
 
   function handleResetClick() {
     if (confirming) {
@@ -34,7 +34,7 @@ export default function CaseTracker({ caseState, onReset }) {
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-200">Case Progress</h3>
         <span className="text-xs text-gray-400">
-          {boxesOpened} / {BOXES_PER_CASE} boxes
+          {boxesOpened} / {boxesPerCase} boxes
         </span>
       </div>
 

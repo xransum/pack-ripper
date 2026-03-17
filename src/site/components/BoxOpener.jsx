@@ -7,6 +7,7 @@ import {
   saveCaseState,
   advanceCaseState,
   resetCaseState,
+  DEFAULT_BOXES_PER_CASE,
 } from '@simulator/pity.js';
 
 /**
@@ -43,7 +44,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
     setTimeout(() => {
       try {
         const boxResult = openBox(setData, boxTypeKey, caseState);
-        const nextState = advanceCaseState(caseState, boxResult.hitFired);
+        const nextState = advanceCaseState(caseState, boxResult.hitFired, boxesPerCase);
         saveCaseState(setData.id, boxTypeKey, nextState);
         setCaseState(nextState);
         setResult(boxResult);
@@ -61,6 +62,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
   }, [setData.id, boxTypeKey]);
 
   const boxConfig = setData.box_types?.[boxTypeKey];
+  const boxesPerCase = boxConfig?.boxes_per_case ?? DEFAULT_BOXES_PER_CASE;
   const totalPacks = result?.packs?.length ?? 0;
   const totalCards = result?.packs?.reduce((s, p) => s + p.cards.length, 0) ?? 0;
   const hitCards = result?.packs?.flatMap((p) => p.cards).filter((c) => c.is_hit) ?? [];
@@ -68,7 +70,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
   return (
     <div className="flex flex-col gap-6">
       {/* Case tracker */}
-      <CaseTracker caseState={caseState} onReset={handleReset} />
+      <CaseTracker caseState={caseState} boxesPerCase={boxesPerCase} onReset={handleReset} />
 
       {/* Open button */}
       <div className="flex items-center gap-4">

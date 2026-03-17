@@ -7,7 +7,7 @@
  * Key format: "pack-ripper:case:<setId>:<boxTypeKey>"
  */
 
-const BOXES_PER_CASE = 20;
+const DEFAULT_BOXES_PER_CASE = 20;
 const HIT_CHANCE_START = 0.05;
 const HIT_CHANCE_INCREMENT = 0.05;
 const HIT_CHANCE_MAX = 0.95;
@@ -64,11 +64,15 @@ export function saveCaseState(setId, boxTypeKey, state) {
  *   - If a hit fired: hitChance resets to HIT_CHANCE_START
  *   - If no hit: hitChance += HIT_CHANCE_INCREMENT (capped at HIT_CHANCE_MAX)
  *   - boxesOpened increments by 1
- *   - If boxesOpened reaches BOXES_PER_CASE: full reset
+ *   - If boxesOpened reaches boxesPerCase: full reset
+ *
+ * @param {object} current      - current case state
+ * @param {boolean} hitFired    - whether a pity-gated hit was pulled this box
+ * @param {number} boxesPerCase - case size for this box type (default 20)
  *
  * Returns the new state.
  */
-export function advanceCaseState(current, hitFired) {
+export function advanceCaseState(current, hitFired, boxesPerCase = DEFAULT_BOXES_PER_CASE) {
   const next = { ...current };
 
   if (hitFired) {
@@ -84,7 +88,7 @@ export function advanceCaseState(current, hitFired) {
   next.boxesOpened = current.boxesOpened + 1;
 
   // Full case consumed -- reset everything
-  if (next.boxesOpened >= BOXES_PER_CASE) {
+  if (next.boxesOpened >= boxesPerCase) {
     return defaultState();
   }
 
@@ -100,4 +104,4 @@ export function resetCaseState(setId, boxTypeKey) {
   return fresh;
 }
 
-export { BOXES_PER_CASE, HIT_CHANCE_START };
+export { DEFAULT_BOXES_PER_CASE, HIT_CHANCE_START };
