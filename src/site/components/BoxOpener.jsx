@@ -143,7 +143,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
       {/* Mode + auto-advance toggles */}
       <div className="flex items-center gap-4 flex-wrap">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-400">Mode:</span>
+          <span className="text-xs text-gray-400">Mode</span>
           <div className="flex rounded-lg overflow-hidden border border-gray-700 text-xs font-semibold">
             <button
               onClick={() => toggleMode(false)}
@@ -170,7 +170,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
 
         {packByPack && (
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-400">Auto-advance:</span>
+            <span className="text-xs text-gray-400">Auto-advance</span>
             <div className="flex rounded-lg overflow-hidden border border-gray-700 text-xs font-semibold">
               <button
                 onClick={() => toggleAuto(true)}
