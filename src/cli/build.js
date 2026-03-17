@@ -40,7 +40,7 @@ export function runBuild(opts = {}) {
   console.log(`  Output:    ${resolve(ROOT, 'dist')}\n`);
 
   try {
-    execSync(`npx vite build --base "${basePath}"`, {
+    execSync(`node "${resolve(ROOT, 'node_modules/.bin/vite')}" build --base "${basePath}"`, {
       cwd: resolve(__dirname, '../site'),
       stdio: 'inherit',
       env: {

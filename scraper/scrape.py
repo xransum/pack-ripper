@@ -9,10 +9,14 @@ Usage:
     python scraper/scrape.py --url https://www.beckett.com/news/2025-donruss-optic-football-cards/ --out src/data/sets
 
 The scraper is designed to be re-runnable. It will overwrite existing files.
+Pass --images-dir to download card images locally (default: public/images).
+Pass --no-images to skip image downloading entirely.
 """
 
 import argparse
+import hashlib
 import json
+import mimetypes
 import os
 import re
 import sys
@@ -48,6 +52,24 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.5",
 }
+
+
+def fetch_bytes(url: str, retries: int = 3) -> tuple[bytes, str]:
+    """Fetch raw bytes and content-type from a URL. Returns (data, content_type)."""
+    for attempt in range(retries):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=20)
+            resp.raise_for_status()
+            ct = resp.headers.get("Content-Type", "image/jpeg").split(";")[0].strip()
+            return resp.content, ct
+        except requests.RequestException as exc:
+            if attempt < retries - 1:
+                wait = 2**attempt
+                print(f"  [warn] fetch failed ({exc}), retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
+    return b"", ""
 
 
 def fetch(url: str, retries: int = 3) -> BeautifulSoup:
@@ -653,11 +675,116 @@ def _collect_list_items(heading) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Image downloading
+# ---------------------------------------------------------------------------
+
+
+def _ext_for_content_type(ct: str) -> str:
+    """Return a file extension for a content-type string."""
+    mapping = {
+        "image/jpeg": ".jpg",
+        "image/jpg": ".jpg",
+        "image/png": ".png",
+        "image/gif": ".gif",
+        "image/webp": ".webp",
+        "image/avif": ".avif",
+    }
+    return mapping.get(ct, mimetypes.guess_extension(ct) or ".jpg")
+
+
+def _slug_from_url(url: str) -> str:
+    """Derive a short stable filename slug from a CDN URL."""
+    # Use the last path segment (filename), strip query string
+    path = url.split("?")[0].rstrip("/")
+    basename = path.split("/")[-1]
+    # Remove extension -- we'll add it back from content-type
+    name, _ = os.path.splitext(basename)
+    # Sanitize
+    name = re.sub(r"[^a-zA-Z0-9_-]", "-", name)[:80]
+    return name or hashlib.md5(url.encode()).hexdigest()[:12]
+
+
+def download_images(
+    img_map: dict[str, str],
+    set_id: str,
+    images_dir: str,
+    base_url_prefix: str,
+) -> dict[str, str]:
+    """
+    Download all images in img_map (alt_text -> cdn_url) to disk.
+
+    Returns a mapping of cdn_url -> local web path (e.g. /pack-ripper/images/<set-id>/foo.jpg).
+    Already-downloaded files are skipped (idempotent).
+    """
+    out_dir = os.path.join(images_dir, set_id)
+    os.makedirs(out_dir, exist_ok=True)
+
+    # Invert: cdn_url -> alt_text (we only care about unique URLs)
+    unique_urls = list(set(img_map.values()))
+    print(f"  Downloading {len(unique_urls)} image(s) to {out_dir}...")
+
+    url_to_local: dict[str, str] = {}
+    downloaded = 0
+    skipped = 0
+
+    for url in unique_urls:
+        slug = _slug_from_url(url)
+        # Probe for an already-downloaded file with any extension
+        existing = None
+        for f in os.listdir(out_dir):
+            name, _ = os.path.splitext(f)
+            if name == slug:
+                existing = f
+                break
+
+        if existing:
+            local_path = f"{base_url_prefix}{set_id}/{existing}"
+            url_to_local[url] = local_path
+            skipped += 1
+            continue
+
+        try:
+            data, ct = fetch_bytes(url)
+            ext = _ext_for_content_type(ct)
+            filename = f"{slug}{ext}"
+            full_path = os.path.join(out_dir, filename)
+            with open(full_path, "wb") as fh:
+                fh.write(data)
+            local_path = f"{base_url_prefix}{set_id}/{filename}"
+            url_to_local[url] = local_path
+            downloaded += 1
+            time.sleep(0.1)  # polite delay
+        except Exception as exc:
+            print(f"  [warn] could not download {url}: {exc}")
+
+    print(f"    {downloaded} downloaded, {skipped} already cached")
+    return url_to_local
+
+
+def rewrite_image_urls(data: dict, url_to_local: dict[str, str]):
+    """
+    Walk all card entries in a set data dict and replace CDN image_url values
+    with their local equivalents from url_to_local.
+    Modifies data in place.
+    """
+
+    def _rewrite_list(cards: list):
+        for card in cards:
+            if card.get("image_url") and card["image_url"] in url_to_local:
+                card["image_url"] = url_to_local[card["image_url"]]
+
+    _rewrite_list(data["cards"].get("base", []))
+    _rewrite_list(data["cards"].get("rated_rookies", []))
+    for cat_cards in data["cards"].get("inserts", {}).values():
+        _rewrite_list(cat_cards)
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
 
-def scrape_set(meta: dict, out_dir: str):
+def scrape_set(meta: dict, out_dir: str, images_dir: str | None, base_url_prefix: str):
     print(f"\n[{meta['id']}]")
     print(f"  URL: {meta['url']}")
     print("  Fetching page...")
@@ -670,11 +797,44 @@ def scrape_set(meta: dict, out_dir: str):
 
     data = parse_beckett_page(soup, meta)
 
+    if images_dir is not None:
+        # Collect all unique CDN URLs from the parsed data
+        img_map = _collect_image_urls(data)
+        if img_map:
+            url_to_local = download_images(
+                img_map, meta["id"], images_dir, base_url_prefix
+            )
+            rewrite_image_urls(data, url_to_local)
+        else:
+            print("  No images found to download.")
+
     out_path = os.path.join(out_dir, f"{meta['id']}.json")
     with open(out_path, "w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
 
     print(f"  Written: {out_path}")
+
+
+def _collect_image_urls(data: dict) -> dict[str, str]:
+    """
+    Walk all cards and collect a mapping of cdn_url -> cdn_url for every
+    non-null image_url. (download_images expects alt_text -> url but we only
+    need unique URLs here, so key == value is fine.)
+    """
+    urls: dict[str, str] = {}
+
+    def _scan(cards: list):
+        for card in cards:
+            url = card.get("image_url")
+            if url:
+                urls[url] = url
+
+    _scan(data["cards"].get("base", []))
+    _scan(data["cards"].get("rated_rookies", []))
+    for cat_cards in data["cards"].get("inserts", {}).values():
+        _scan(cat_cards)
+
+    return urls
 
 
 def main():
@@ -685,9 +845,27 @@ def main():
         default="src/data/sets",
         help="Output directory for JSON files (default: src/data/sets)",
     )
+    parser.add_argument(
+        "--images-dir",
+        default="public/images",
+        help="Directory to download card images into (default: public/images). "
+        "Pass --no-images to disable downloading.",
+    )
+    parser.add_argument(
+        "--no-images",
+        action="store_true",
+        help="Skip downloading images (image_url fields stay as CDN URLs or null)",
+    )
+    parser.add_argument(
+        "--base-url",
+        default="/pack-ripper/images/",
+        help="Web path prefix for local image URLs written into the JSON "
+        "(default: /pack-ripper/images/)",
+    )
     args = parser.parse_args()
 
     os.makedirs(args.out, exist_ok=True)
+    images_dir = None if args.no_images else args.images_dir
 
     if args.url:
         # Single URL -- use a generic meta, the user can rename the file later
@@ -700,10 +878,10 @@ def main():
             "sport": "unknown",
             "boxes_per_case": 12,
         }
-        scrape_set(meta, args.out)
+        scrape_set(meta, args.out, images_dir, args.base_url)
     else:
         for meta in DEFAULT_SETS:
-            scrape_set(meta, args.out)
+            scrape_set(meta, args.out, images_dir, args.base_url)
             time.sleep(1)  # polite delay between requests
 
     print("\nDone.\n")

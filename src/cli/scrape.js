@@ -26,6 +26,8 @@ function checkUv() {
 
 export async function runScrape(opts = {}) {
   const outDir = resolve(ROOT, opts.outDir || 'src/data/sets');
+  const imagesDir = resolve(ROOT, opts.imagesDir || 'public/images');
+  const baseUrl = opts.baseUrl || '/pack-ripper/images/';
 
   if (!existsSync(SCRAPER)) {
     console.error('\nERROR: scraper/scrape.py not found.');
@@ -46,16 +48,23 @@ export async function runScrape(opts = {}) {
   if (opts.url) {
     args.push(`--url "${opts.url}"`);
   }
+  if (opts.noImages) {
+    args.push('--no-images');
+  } else {
+    args.push(`--images-dir "${imagesDir}"`);
+    args.push(`--base-url "${baseUrl}"`);
+  }
 
   console.log('\npack-ripper scrape');
   console.log('='.repeat(50));
-  console.log(`  Runner:  uv run`);
-  console.log(`  Scraper: ${SCRAPER}`);
-  console.log(`  Output:  ${outDir}`);
+  console.log(`  Runner:     uv run`);
+  console.log(`  Scraper:    ${SCRAPER}`);
+  console.log(`  Output:     ${outDir}`);
+  console.log(`  Images:     ${opts.noImages ? 'disabled' : imagesDir}`);
   if (opts.url) {
-    console.log(`  URL:     ${opts.url}`);
+    console.log(`  URL:        ${opts.url}`);
   } else {
-    console.log('  Mode:    all default sets');
+    console.log('  Mode:       all default sets');
   }
   console.log('');
 
@@ -74,7 +83,7 @@ export async function runScrape(opts = {}) {
     if (files.length > 0) {
       files.forEach((f) => console.log(`  - ${f}`));
     }
-    console.log('\nCommit the updated src/data/sets/ files when done.\n');
+    console.log('\nCommit the updated src/data/sets/ and public/images/ files when done.\n');
   } catch {
     console.error('\nScrape failed. Check output above for details.');
     process.exit(1);
