@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Card flip animation */
+.card-scene {
+  perspective: 800px;
+}
+
+.card-flipper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card-flipper.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-face-back {
+  /* intentionally left as plain face -- content from parent */
+}
+
+.card-face-front {
+  transform: rotateY(180deg);
+}
+
+/* Stagger animation delays for pack reveal */
+.card-stagger-0 { transition-delay: 0ms; }
+.card-stagger-1 { transition-delay: 120ms; }
+.card-stagger-2 { transition-delay: 240ms; }
+.card-stagger-3 { transition-delay: 360ms; }
+.card-stagger-4 { transition-delay: 480ms; }
+.card-stagger-5 { transition-delay: 600ms; }

@@ -1,0 +1,26 @@
+# build output
+dist/
+
+# deps
+node_modules/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# env
+.env
+.env.local
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,42 @@
+{
+  "name": "pack-ripper",
+  "version": "0.1.0",
+  "description": "Trading card pack opening simulator -- scrapes Beckett checklists, simulates box breaks with real odds",
+  "type": "module",
+  "bin": {
+    "pack-ripper": "./bin/pack-ripper.js"
+  },
+  "scripts": {
+    "scrape": "node bin/pack-ripper.js scrape",
+    "build": "node bin/pack-ripper.js build",
+    "dev": "vite src/site",
+    "preview": "vite preview src/site"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.1",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.1",
+    "gh-pages": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "trading-cards",
+    "pack-simulator",
+    "sports-cards",
+    "donruss",
+    "optic"
+  ],
+  "author": "xransum",
+  "license": "MIT"
+}
