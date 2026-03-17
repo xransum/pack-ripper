@@ -197,15 +197,43 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         )}
       </div>
 
-      {/* Open button row */}
+      {/* Action button row */}
       <div className="flex items-center gap-4">
-        {(!packByPack || !result) && (
+        {/* Open All mode: always show open button */}
+        {!packByPack && (
           <button
             onClick={handleOpen}
             disabled={opening}
             className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm shadow-lg shadow-indigo-900/30"
           >
             {opening ? 'Opening...' : `Open ${boxConfig?.label ?? 'Box'}`}
+          </button>
+        )}
+
+        {/* Pack by Pack mode: open box before first result; advance/open-another once in progress */}
+        {packByPack && !result && (
+          <button
+            onClick={handleOpen}
+            disabled={opening}
+            className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm shadow-lg shadow-indigo-900/30"
+          >
+            {opening ? 'Opening...' : `Open ${boxConfig?.label ?? 'Box'}`}
+          </button>
+        )}
+
+        {packByPack && result && (
+          <button
+            onClick={handleAdvance}
+            disabled={opening}
+            className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm shadow-lg shadow-indigo-900/30"
+          >
+            {opening
+              ? 'Opening...'
+              : allRevealed
+                ? `Open Another ${boxConfig?.label ?? 'Box'}`
+                : currentPackIdx + 1 < totalPacks
+                  ? 'Open Next Pack'
+                  : `Open Another ${boxConfig?.label ?? 'Box'}`}
           </button>
         )}
 
@@ -250,36 +278,13 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         <div className="flex flex-col gap-8">
           {/* Current pack being opened -- interactive */}
           {!allRevealed && (
-            <div className="flex flex-col gap-4">
-              <PackReveal
-                key={`${currentKey}-${packs.length}-${currentPackIdx}`}
-                pack={packs[currentPackIdx]}
-                packNumber={currentPackIdx + 1}
-                onAdvance={handleAdvance}
-                autoAdvance={autoAdvance}
-              />
-              <button
-                onClick={handleAdvance}
-                className="self-start bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm shadow-lg shadow-indigo-900/30"
-              >
-                {currentPackIdx + 1 < totalPacks ? 'Open Next Pack' : `Open Another ${boxConfig?.label ?? 'Box'}`}
-              </button>
-            </div>
-          )}
-
-          {/* All packs revealed -- show open another button */}
-          {allRevealed && (
-            <button
-              onClick={handleAdvance}
-              className="self-start bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm shadow-lg shadow-indigo-900/30"
-            >
-              Open Another {boxConfig?.label ?? 'Box'}
-              {hitCards.length > 0 && (
-                <span className="ml-2 text-yellow-300">
-                  ({hitCards.length} hit{hitCards.length !== 1 ? 's' : ''}!)
-                </span>
-              )}
-            </button>
+            <PackReveal
+              key={`${currentKey}-${packs.length}-${currentPackIdx}`}
+              pack={packs[currentPackIdx]}
+              packNumber={currentPackIdx + 1}
+              onAdvance={handleAdvance}
+              autoAdvance={autoAdvance}
+            />
           )}
 
           {/* Previously revealed packs -- shown below in reverse order so newest is closest */}
