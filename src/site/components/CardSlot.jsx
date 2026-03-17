@@ -10,6 +10,17 @@ const SLOT_LABELS = {
   auto: 'Auto',
 };
 
+const INSERT_CATEGORY_LABELS = {
+  downtown: 'Downtown',
+  downtown_duo: 'Downtown Duo',
+  downtown_legends: 'Downtown Legends',
+  rookie_kings: 'Rookie Kings',
+  sunday_kings: 'Sunday Kings',
+  uptowns: 'Uptowns',
+  my_house: 'My House',
+  retro_2015: '2015 Retro',
+};
+
 function parallelBadgeClass(parallel) {
   if (!parallel) return '';
   const p = parallel.toLowerCase();
@@ -110,7 +121,9 @@ export default function CardSlot({ card, staggerIndex = 0, revealed = false }) {
               )}
               {card?.slot && (
                 <span className="text-[8px] px-1 py-0.5 rounded bg-gray-700 text-gray-300">
-                  {SLOT_LABELS[card.slot] ?? card.slot}
+                  {card.slot === 'insert' && card._category
+                    ? INSERT_CATEGORY_LABELS[card._category] ?? card._category
+                    : SLOT_LABELS[card.slot] ?? card.slot}
                 </span>
               )}
             </div>
