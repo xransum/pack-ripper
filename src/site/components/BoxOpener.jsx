@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import PackReveal from './PackReveal.jsx';
+import PackModal from './PackModal.jsx';
 import CaseTracker from './CaseTracker.jsx';
 import { openBox } from '@simulator/engine.js';
 import {
@@ -44,6 +45,8 @@ export default function BoxOpener({ setData, boxTypeKey }) {
   const [autoAdvance, setAutoAdvance] = useState(loadAuto);
   // How many packs the user has clicked through (0 = none opened yet in pbp mode)
   const [revealedUpTo, setRevealedUpTo] = useState(0);
+  // Which pack index is currently showing in the modal (null = modal closed)
+  const [modalPackIdx, setModalPackIdx] = useState(null);
 
   // Re-load case state when set or box type changes
   const [lastKey, setLastKey] = useState(`${setData.id}:${boxTypeKey}`);
@@ -53,6 +56,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
     setCaseState(loaded);
     setResult(null);
     setRevealedUpTo(0);
+    setModalPackIdx(null);
     setLastKey(currentKey);
   }
 
@@ -72,6 +76,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
     setOpening(true);
     setResult(null);
     setRevealedUpTo(0);
+    setModalPackIdx(null);
 
     setTimeout(() => {
       try {
@@ -90,15 +95,24 @@ export default function BoxOpener({ setData, boxTypeKey }) {
     setCaseState(fresh);
     setResult(null);
     setRevealedUpTo(0);
+    setModalPackIdx(null);
   }, [setData.id, boxTypeKey]);
 
-  // Advance to next pack; if on the last pack open a fresh box
-  function handleAdvance() {
+  // Called by PackReveal after the tear animation completes -- show the modal
+  function handleTearComplete(packIdx) {
+    setModalPackIdx(packIdx);
+  }
+
+  // Called by PackModal's advance button -- close modal and move to next pack
+  function handleModalNext() {
     const packs = result?.packs ?? [];
+    setModalPackIdx(null);
+
     if (revealedUpTo < packs.length) {
+      // More packs in this box
       setRevealedUpTo(revealedUpTo + 1);
     } else {
-      // Last pack done -- open another box
+      // Last pack -- open a fresh box
       if (opening) return;
       setOpening(true);
       setResult(null);
@@ -121,6 +135,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
     saveMode(pbp);
     setResult(null);
     setRevealedUpTo(0);
+    setModalPackIdx(null);
   }
 
   function toggleAuto(v) {
@@ -132,8 +147,9 @@ export default function BoxOpener({ setData, boxTypeKey }) {
   const totalPacks = packs.length;
   const totalCards = packs.reduce((s, p) => s + p.cards.length, 0);
   const hitCards = packs.flatMap((p) => p.cards).filter((c) => c.is_hit);
-  const allRevealed = packByPack && revealedUpTo >= totalPacks && totalPacks > 0;
-  const currentPackIdx = revealedUpTo - 1; // 0-based index of the pack being opened
+  const currentPackIdx = revealedUpTo - 1; // 0-based index of the pack being torn open
+
+  const modalPack = modalPackIdx !== null ? packs[modalPackIdx] : null;
 
   return (
     <div className="flex flex-col gap-6">
@@ -197,9 +213,9 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         )}
       </div>
 
-      {/* Action button row */}
+      {/* Action button row -- only shown when there is no active pack-by-pack tear in progress */}
       <div className="flex items-center gap-4">
-        {/* Open All mode: always show open button */}
+        {/* Open All mode */}
         {!packByPack && (
           <button
             onClick={handleOpen}
@@ -210,7 +226,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
           </button>
         )}
 
-        {/* Pack by Pack mode: open box before first result; advance/open-another once in progress */}
+        {/* Pack by Pack -- initial open button (no box open yet) */}
         {packByPack && !result && (
           <button
             onClick={handleOpen}
@@ -221,25 +237,9 @@ export default function BoxOpener({ setData, boxTypeKey }) {
           </button>
         )}
 
-        {packByPack && result && (
-          <button
-            onClick={handleAdvance}
-            disabled={opening}
-            className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm shadow-lg shadow-indigo-900/30"
-          >
-            {opening
-              ? 'Opening...'
-              : allRevealed
-                ? `Open Another ${boxConfig?.label ?? 'Box'}`
-                : currentPackIdx + 1 < totalPacks
-                  ? 'Open Next Pack'
-                  : `Open Another ${boxConfig?.label ?? 'Box'}`}
-          </button>
-        )}
-
         {result && !packByPack && (
           <span className="text-xs text-gray-400">
-            {totalPacks} pack{totalPacks !== 1 ? 's' : ''}, {totalCards} cards
+            {totalPacks} pack{totalPacks !== 1 ? 's' : ''}, {totalCards} card{totalCards !== 1 ? 's' : ''}
             {hitCards.length > 0 && (
               <span className="text-yellow-400 ml-2 font-semibold">
                 {hitCards.length} hit{hitCards.length !== 1 ? 's' : ''}!
@@ -260,7 +260,7 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         )}
       </div>
 
-      {/* Open all -- dump every pack */}
+      {/* Open all -- dump every pack inline */}
       {result && !packByPack && (
         <div className="flex flex-col gap-8">
           {packs.map((pack, idx) => (
@@ -275,43 +275,18 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         </div>
       )}
 
-      {/* Pack by pack -- active pack at top, revealed history below */}
-      {result && packByPack && revealedUpTo > 0 && (
-        <div className="flex flex-col gap-8">
-          {/* Current pack being opened -- interactive */}
-          {!allRevealed && (
-            <PackReveal
-              key={`${currentKey}-${packs.length}-${currentPackIdx}`}
-              pack={packs[currentPackIdx]}
-              packNumber={currentPackIdx + 1}
-              brand={setData.brand ?? null}
-              setName={setData.name ?? ''}
-              onAdvance={handleAdvance}
-              autoAdvance={autoAdvance}
-            />
-          )}
-
-          {/* Previously revealed packs -- shown below in reverse order so newest is closest */}
-          {revealedUpTo > 1 && (
-            <div className="flex flex-col gap-8 border-t border-gray-700 pt-6">
-              <span className="text-xs text-gray-500 uppercase tracking-wider">Previous Packs</span>
-              {(() => {
-                const historyEnd = allRevealed ? revealedUpTo : currentPackIdx;
-                return packs
-                  .slice(0, historyEnd)
-                  .reverse()
-                  .map((pack, i) => (
-                    <PackReveal
-                      key={`${currentKey}-history-${historyEnd - 1 - i}`}
-                      pack={pack}
-                      packNumber={historyEnd - i}
-                      brand={setData.brand ?? null}
-                      setName={setData.name ?? ''}
-                    />
-                  ));
-              })()}
-            </div>
-          )}
+      {/* Pack by Pack -- one PackArt on screen at a time; modal handles card reveal */}
+      {result && packByPack && revealedUpTo > 0 && modalPackIdx === null && (
+        <div className="flex justify-center py-4">
+          <PackReveal
+            key={`${currentKey}-${packs.length}-${currentPackIdx}`}
+            pack={packs[currentPackIdx]}
+            packNumber={currentPackIdx + 1}
+            brand={setData.brand ?? null}
+            setName={setData.name ?? ''}
+            onAdvance={() => handleTearComplete(currentPackIdx)}
+            autoAdvance={autoAdvance}
+          />
         </div>
       )}
 
@@ -319,6 +294,18 @@ export default function BoxOpener({ setData, boxTypeKey }) {
         <div className="text-gray-500 text-sm">
           Click the button above to open a box.
         </div>
+      )}
+
+      {/* Card reveal modal -- rendered outside the flow so it overlays everything */}
+      {modalPack && (
+        <PackModal
+          pack={modalPack}
+          packNumber={modalPackIdx + 1}
+          totalPacks={totalPacks}
+          boxLabel={boxConfig?.label ?? 'Box'}
+          onNext={handleModalNext}
+          isLastPack={revealedUpTo >= totalPacks}
+        />
       )}
     </div>
   );

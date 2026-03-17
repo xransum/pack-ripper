@@ -40,11 +40,10 @@ export default function PackReveal({
     return () => clearTimeout(t);
   }, [phase]);
 
-  // Auto-advance: fires 1400ms after cards start flipping (last stagger ~600ms + 600ms flip + 200ms buffer)
+  // Auto-advance: auto-tear after a brief pause so the pack art is visible
   useEffect(() => {
     if (!onAdvance || !autoAdvance || phase !== 'idle' || advancedRef.current) return;
-    // 1400ms (card reveal) + 350ms (tear) = 1750ms from mount
-    const t = setTimeout(() => doAdvance(), 1750);
+    const t = setTimeout(() => doAdvance(), 800);
     return () => clearTimeout(t);
   }, [phase, onAdvance, autoAdvance]);
 
@@ -52,49 +51,56 @@ export default function PackReveal({
     if (advancedRef.current || phase !== 'idle') return;
     advancedRef.current = true;
     setPhase('tearing');
-    // After tear animation completes, reveal cards and notify parent
+    // After tear animation completes, notify parent (modal handles cards)
+    // or, in open-all mode, transition to revealed to show inline cards.
     setTimeout(() => {
-      setPhase('revealed');
-      if (onAdvance) onAdvance();
+      if (onAdvance) {
+        onAdvance();
+      } else {
+        setPhase('revealed');
+      }
     }, 360);
   }
 
   const cards = pack?.cards ?? [];
   const hasHit = cards.some((c) => c.is_hit);
 
+  // Pack-by-pack mode: only render the pack art (modal owns the card reveal)
+  if (onAdvance) {
+    return (
+      <PackArt
+        brand={brand}
+        setName={setName}
+        packNumber={packNumber}
+        phase={phase}
+        onClick={doAdvance}
+      />
+    );
+  }
+
+  // Open-all mode: pack art skipped, render cards inline
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2">
         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
           Pack {packNumber}
         </span>
-        {hasHit && phase === 'revealed' && (
+        {hasHit && (
           <span className="text-[10px] font-bold bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full">
             HIT
           </span>
         )}
       </div>
-
-      {phase !== 'revealed' ? (
-        <PackArt
-          brand={brand}
-          setName={setName}
-          packNumber={packNumber}
-          phase={phase}
-          onClick={doAdvance}
-        />
-      ) : (
-        <div className="flex flex-wrap gap-3">
-          {cards.map((card, idx) => (
-            <CardSlot
-              key={idx}
-              card={card}
-              staggerIndex={idx}
-              revealed={cardsRevealed}
-            />
-          ))}
-        </div>
-      )}
+      <div className="flex flex-wrap gap-3">
+        {cards.map((card, idx) => (
+          <CardSlot
+            key={idx}
+            card={card}
+            staggerIndex={idx}
+            revealed={cardsRevealed}
+          />
+        ))}
+      </div>
     </div>
   );
 }
