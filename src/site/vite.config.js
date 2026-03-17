@@ -10,6 +10,7 @@ const base = process.env.VITE_BASE_PATH || '/pack-ripper/';
 
 export default defineConfig({
   base,
+  publicDir: resolve(__dirname, '../../public'),
   plugins: [
     react(),
     tailwindcss(),
